@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Зоя Голуб](https://up.htmlacademy.ru/adaptive/22/user/1318315).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Рус](https://htmlacademy.ru/profile/vanillawulf).
 
 ---
 
