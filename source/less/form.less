@@ -4,7 +4,7 @@
   list-style-type: none;
 }
 
-.form__name {
+.form__question {
   color: @red;
   font-weight: normal;
   font-size: 14px;
@@ -26,4 +26,118 @@
   box-sizing: border-box;
   width: 276px;
   height: 59px;
+}
+
+.form__os {
+  background-color: @grey;
+  width: 100%;
+  height: 340px;
+  border: none;
+  order: 1;
+}
+
+.form__list-position {
+  color: @black-blue;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  position: relative;
+}
+
+.form__input-radio+label::before {
+  content: "";
+  position: absolute;
+  top: px;
+  left: px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: @white;
+  border: 2px solid @grey-dark;
+}
+
+.form__input-radio:checked+label::after {
+  content: "";
+  position: absolute;
+  top: px;
+  left: px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: @red;
+}
+
+.form__input-checkbox+label::before {
+  content: "";
+  position: absolute;
+  top: px;
+  left: px;
+  width: 35px;
+  height: 35px;
+  border-radius: 1px;
+  background: @white;
+  border: 2px solid @grey-dark;
+}
+
+.form__input-checkbox+label::before {
+  content: "";
+  position: absolute;
+  top: px;
+  left: px;
+  width: 22px;
+  height: 16px;
+  background-image: url(../img/check.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.form__contacts {
+  border: none;
+}
+
+.form__contacts-question {
+  display: none;
+}
+
+.form__progress {
+  display: none;
+}
+
+.form__comments-question {
+  border: transparent;
+}
+
+.form__comments-answer--box {
+  width: 276px;
+  height: 197px;
+  border: 2px solid @grey-dark;
+  border-radius: 1px;
+}
+
+.form__button {
+  color: @white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.form__button--box {
+  width: 276px;
+  height: 59px;
+  background: @green;
+  border: 2px solid @green;
+  border-radius: 1px;
+}
+
+.form__footnote {
+  color: @black-blue;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.form__footnote-star {
+  color: @red;
 }

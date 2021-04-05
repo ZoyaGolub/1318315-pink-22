@@ -40,9 +40,11 @@
     </div>
   </header>
   <main>
-    <h1 class="main-header container">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    <p class="main-offer">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-    <p class="main-fill">Пожалуйста, заполните форму ниже:</p>
+    <div class="main-speech container">
+      <h1 class="main-speech__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <p class="main-speech__offer">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <p class="main-speech__fill">Пожалуйста, заполните форму ниже:</p>
+    </div>
     <form class="form" id="contest" action="https://echo.htmlacademy.ru" method="post">
       <ul class="form__human-name form__human-name-list">
         <li class="form__human-name-item form__human-name-surname">
@@ -59,70 +61,71 @@
         </li>
       </ul>
       <fieldset class="form__os">
-        <legend class="form__os-question">С каким приложением путешествовали?</legend>
+        <legend class="form__question form__os-question">С каким приложением путешествовали?</legend>
         <ul class="form__os-answer-list">
           <li class="form__os-answer-item">
-            <label class="form__os-radio" for="Pink_для_iOS">Pink для iOS</label>
-            <input class="visually-hidden" id="Pink_для_iOS" type="radio" name="os" form="contest" value="Pink для iOS" checked>
+            <label class="form__list-position" for="Pink_для_iOS">Pink для iOS</label>
+            <input class="visually-hidden form__input-radio" id="Pink_для_iOS" type="radio" name="os" form="contest" value="Pink для iOS" checked>
           </li>
           <li class="form__os-answer-item">
-            <label class="form__os-radio" for="Pink_на_Android">Pink на Android</label>
-            <input class="visually-hidden" id="Pink_на_Android" type="radio" name="os" form="contest" value="Pink на Android">
+            <label class="form__list-position" for="Pink_на_Android">Pink на Android</label>
+            <input class="visually-hidden form__input-radio" id="Pink_на_Android" type="radio" name="os" form="contest" value="Pink на Android">
           </li>
           <li class="form__os-answer-item">
-            <label class="form__os-radio" for="Windows_Phone">Windows Phone</label>
-            <input class="visually-hidden" id="Windows_Phone" type="radio" name="os" form="contest" value="Windows Phone">
+            <label class="form__list-position" for="Windows_Phone">Windows Phone</label>
+            <input class="visually-hidden form__input-radio" id="Windows_Phone" type="radio" name="os" form="contest" value="Windows Phone">
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__contacts">
-        <legend class="form__contacts-question">Контактная информация</legend>
+        <legend class="form__question form__contacts-question">Контактная информация</legend>
         <ul class="form__contacts-answer-list">
           <li class="form__contacts-answer-item">
-            <input class="form__text" id="form__tel" type="tel" name="tel" form="contest" placeholder="Номер, пожалуйста">
-            <label class="form__contacts-name" for="form__tel">Номер телефона</label>
+            <input class="form__text form__text--box" id="form__tel" type="tel" name="tel" form="contest" placeholder="Номер, пожалуйста">
+            <label class="form__question" for="form__tel">Номер телефона</label>
           </li>
           <li class="form__os-answer-item">
-            <input class="form__text" id="form__email" type="email" name="email" form="contest" placeholder="Введите почту" required>
-            <label class="form__contacts-name" for="form__email">Адрес почты</label>
+            <input class="form__text form__text--box" id="form__email" type="email" name="email" form="contest" placeholder="Введите почту" required>
+            <label class="form__question" for="form__email">Адрес почты</label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__progress">
-        <legend class="form__progress-question">Ваши безбашенные достижения в путешествии</legend>
+        <legend class="form__question form__progress-question">Ваши безбашенные достижения в путешествии</legend>
         <ul class="form__progress-answer-list">
           <li class="form__progress-answer-item">
-            <label class="form__progress-checkbox" for="Сделал_селфи_с_акулой">Сделал селфи с акулой</label>
-            <input class="visually-hidden" id="Сделал_селфи_с_акулой" type="checkbox" name="progress" form="contest" value="Сделал селфи с акулой" checked>
+            <label class="form__list-position" for="Сделал_селфи_с_акулой">Сделал селфи с акулой</label>
+            <input class="visually-hidden form__input-checkbox" id="Сделал_селфи_с_акулой" type="checkbox" name="progress" form="contest" value="Сделал селфи с акулой" checked>
           </li>
           <li class="form__progress-answer-item">
-            <label class="form__progress-checkbox" for="Обгорел_на_пляже">Обгорел на пляже</label>
-            <input class="visually-hidden" id="Обгорел_на_пляже" type="checkbox" name="progress" form="contest" value="Обгорел на пляже" checked>
+            <label class="form__list-position" for="Обгорел_на_пляже">Обгорел на пляже</label>
+            <input class="visually-hidden form__input-checkbox" id="Обгорел_на_пляже" type="checkbox" name="progress" form="contest" value="Обгорел на пляже" checked>
           </li>
           <li class="form__progress-answer-item">
-            <label class="form__progress-checkbox" for="Видел_Чака_Норриса">Видел Чака Норриса</label>
-            <input class="visually-hidden" id="Видел_Чака_Норриса" type="checkbox" name="progress" form="contest" value="Видел Чака Норриса">
+            <label class="form__list-position" for="Видел_Чака_Норриса">Видел Чака Норриса</label>
+            <input class="visually-hidden form__input-checkbox" id="Видел_Чака_Норриса" type="checkbox" name="progress" form="contest" value="Видел Чака Норриса">
           </li>
           <li class="form__progress-answer-item">
-            <label class="form__progress-checkbox" for="Накупил_сувениров">Накупил сувениров</label>
-            <input class="visually-hidden" id="Накупил_сувениров" type="checkbox" name="progress" form="contest" value="Накупил сувениров">
+            <label class="form__list-position" for="Накупил_сувениров">Накупил сувениров</label>
+            <input class="visually-hidden form__input-checkbox" id="Накупил_сувениров" type="checkbox" name="progress" form="contest" value="Накупил сувениров">
           </li>
           <li class="form__progress-answer-item">
-            <label class="form__progress-checkbox" for="Удержал_башню">Удержал башню</label>
-            <input class="visually-hidden" id="Удержал_башню" type="checkbox" name="progress" form="contest"  value="Удержал башню" checked>
+            <label class="form__list-position" for="Удержал_башню">Удержал башню</label>
+            <input class="visually-hidden form__input-checkbox" id="Удержал_башню" type="checkbox" name="progress" form="contest"  value="Удержал башню" checked>
           </li>
           <li class="form__progress-answer-item">
-            <label class="form__progress-checkbox" for="Разгромил_отель">Разгромил отель</label>
-            <input class="visually-hidden" id="Разгромил_отель" type="checkbox" name="progress" form="contest" value="Разгромил отель">
+            <label class="form__list-position" for="Разгромил_отель">Разгромил отель</label>
+            <input class="visually-hidden form__input-checkbox" id="Разгромил_отель" type="checkbox" name="progress" form="contest" value="Разгромил отель">
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__comments">
-        <legend class="form__comments-question">Опишите свои эмоции</legend>
+        <legend class="form__question form__comments-question">Опишите свои эмоции</legend>
         <label class="visually-hidden" for="form__comments"></label>
-        <input class="form__comments-answer" id="form__comments" type="text" name="comments" form="contest" placeholder="Можно прям в красках, не стесняясь в выражениях">
+        <input class="form__text form__comments-answer form__comments-answer--box" id="form__comments" type="text" name="comments" form="contest" placeholder="Можно прям в красках, не стесняясь в выражениях">
       </fieldset>
-      <button class="form__button" type="submit" aria-label="Отправка заполненой формы на конкурс"></button>
+      <button class="form__button form__button--box" type="submit" aria-label="Отправка заполненой формы на конкурс"></button>
+      <p class="form__footnote"><span class="form__footnote-star">*</span> - Обязательные поля</p>
     </form>
   </main>
   <div class="popup popup-error">
