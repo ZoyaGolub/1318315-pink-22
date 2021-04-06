@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -25,10 +26,10 @@
       <div class="site-navigation__box">
         <ul class="site-navigation__list">
           <li class="site-navigation__item">
-            <a href="#">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="site-navigation__item">
-            <a href="photos.html">Фотографии</a>
+            <a href="#">Фотографии</a>
           </li>
           <li class="site-navigation__item">
             <a href="contest.html">Конкурс</a>
@@ -41,14 +42,16 @@
     </div>
   </header>
   <main>
-    <h1 class="main-header">Фотографии пользователей</h1>
-    <p class="main-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+    <div class="main-speech main-speech--box container">
+      <h1 class="main-speech__header">Фотографии пользователей</h1>
+    </div>
+    <p class="main-speech__offer">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
     <div class="foto">
       <a class="foto__img foto__img--main">
         <img src="img/photos/panorama-cable-car.jpg" width="320" height="137" alt="Панорамный вид с канатной дороги на хлмы и реку">
       </a>
       <p class="foto__hit foto__hit--box">Панорама дня</p>
-      <div class="foto__description">
+      <div class="foto__description container">
         <div class="foto__caption">
           <p class="foto__author">Анна</p>
           <p class="foto__time">(5 минут назад)</p>
@@ -62,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div class="foto">
+    <div class="foto container">
       <a class="foto__img">
         <img src="img/photos/white-car.jpg" width="280" height="180" alt="Белый легковой автомобиль на стоянке">
       </a>
@@ -80,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="foto">
+    <div class="foto container">
       <a class="foto__img">
         <img src="img/photos/drums.jpg" width="280" height="180" alt="Музыкальная барабанная установка">
       </a>
@@ -98,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div class="foto">
+    <div class="foto container">
       <a class="foto__img">
         <img src="img/photos/glass-ceiling.jpg" width="280" height="180" alt="Небо сквозь стеклянные окна крыши">
       </a>
@@ -116,7 +119,7 @@
         </div>
       </div>
     </div>
-    <div class="foto">
+    <div class="foto container">
       <a class="foto__img">
         <img src="img/photos/orange-tent.jpg" width="280" height="180" alt="Бахчевый рынок под оранжевым навесом">
       </a>
@@ -134,7 +137,7 @@
         </div>
       </div>
     </div>
-    <div class="foto">
+    <div class="foto container">
       <a class="foto__img">
         <img src="img/photos/legs-hillside.jpg" width="280" height="180" alt="Вид на горный спуск, сидя на краю камня. Ноги тоже попали в кадр.">
       </a>
@@ -152,7 +155,7 @@
         </div>
       </div>
     </div>
-    <div class="foto">
+    <div class="foto container">
       <a class="foto__img">
         <img src="img/photos/sun-airplane.jpg" width="280" height="180" alt="Солнце светит из-за крыла летящего самолёта">
       </a>
