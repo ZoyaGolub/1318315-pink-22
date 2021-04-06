@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
-  </head>
+</head>
 
 <body class="page__body">
   <header class="page-header">
@@ -23,7 +23,7 @@
       </div>
       <button class="site-navigation__toggle" type="button"><span class="visually-hidden">Откныть навигацию по сайту</span></button>
     </div>
-    <div class="site-navigation container"></div>
+    <div class="site-navigation container">
       <div class="site-navigation__box">
         <ul class="site-navigation__list">
           <li class="site-navigation__item">
@@ -170,16 +170,20 @@
       <h2 class="visually-hidden">Тарифы и перечень услуг, которые входят в тариф</h2>
       <table class="cost__table">
         <tr class="cost__tarif-list">
+          <th class="cost__tarif-item">
+            <p class="cost__tarif-name"></p>
+            <p class="cost__price"></p>
+          </th>
           <th class="cost__tarif-item slide">
             <p class="cost__tarif-name">База</p>
             <p class="cost__price">1,99 usd</p>
           </th>
-          <th class="cost__tarif-item">
-            <p class="cost__tarif-name slide slide--current">Стандарт</p>
+          <th class="cost__tarif-item slide slide--current">
+            <p class="cost__tarif-name">Стандарт</p>
             <p class="cost__price">3,99 usd</p>
           </th>
-          <th class="cost__tarif-item">
-            <p class="cost__tarif-name slide">Анлим</p>
+          <th class="cost__tarif-item  slide">
+            <p class="cost__tarif-name">Анлим</p>
             <p class="cost__price">9,99 usd</p>
           </th>
         </tr>
