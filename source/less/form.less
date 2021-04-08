@@ -44,7 +44,7 @@
   position: relative;
 }
 
-.form__input-radio+label::before {
+.form__input-radio +label::before {
   content: "";
   position: absolute;
   top: px;
@@ -56,7 +56,7 @@
   border: 2px solid @grey-dark;
 }
 
-.form__input-radio:checked+label::after {
+.form__input-radio:checked +label::after {
   content: "";
   position: absolute;
   top: px;
@@ -67,7 +67,7 @@
   background: @red;
 }
 
-.form__input-checkbox+label::before {
+.form__input-checkbox +label::before {
   content: "";
   position: absolute;
   top: px;
@@ -79,7 +79,7 @@
   border: 2px solid @grey-dark;
 }
 
-.form__input-checkbox+label::before {
+.form__input-checkbox:checked +label::before {
   content: "";
   position: absolute;
   top: px;
