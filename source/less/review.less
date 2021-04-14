@@ -8,11 +8,14 @@
 }
 
 .review__author-about {
-  display: none;
-  color: @black-blue;
+  color: @white;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    color: @black-blue;
+  }
 }
 
 .review__text {
@@ -20,4 +23,74 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
+}
+
+.reviews__icon {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .review__author {
+    order: 2;
+  }
+}
+
+.reviews__slider {
+  display: flex;
+  width: 56px;
+  height: 6px;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+@media (max-width: @tablet-width-only) {
+  .reviews__arrow-slider-button {
+    display: none;
+  }
+
+  .reviews {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: min-content 1fr min-content;
+  }
+
+  .reviews__icon {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  .reviews__arrow-left-slider-button {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .reviews__arrow-right-slider-button {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: -1;
+    grid-column-end: -2;
+  }
+
+  .review {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: -2;
+  }
 }

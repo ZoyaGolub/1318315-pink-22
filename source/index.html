@@ -9,10 +9,10 @@
 </head>
 
 <body class="page__body">
-  <header class="container">
-    <div class="logo logo--box">
-      <div class="logo__logo">
-        <a class="logo__name" href="#" aria-label="Логотип компании Pink">
+  <header class="header container">
+    <div class="header__logo header__logo--box">
+      <div class="header__logo-icon">
+        <a class="header__logo-name" href="#" aria-label="Логотип компании Pink">
           <svg width="74" height="23" viewBox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.00496827 1.54857C0.00487772 1.21254 0.135804 0.889818 0.369742 0.649431C0.60368 0.409043 0.922049 0.27008 1.25676 0.262266H8.39001C13.4469 0.262266 16.7751 2.9645 16.7751 7.39179V7.45162C16.7751 12.2977 12.7415 14.8105 7.97274 14.8105H2.53836V21.611C2.55394 21.7874 2.53277 21.9651 2.47619 22.1329C2.41961 22.3006 2.32887 22.4547 2.20973 22.5854C2.09058 22.716 1.94565 22.8204 1.78416 22.8918C1.62266 22.9631 1.44812 23 1.27166 23C1.0952 23 0.920671 22.9631 0.759173 22.8918C0.597674 22.8204 0.452744 22.716 0.333602 22.5854C0.21446 22.4547 0.123708 22.3006 0.0671295 22.1329C0.0105515 21.9651 -0.0106138 21.7874 0.00496827 21.611V1.54857ZM8.07209 12.5171C11.7778 12.5171 14.2119 10.5228 14.2119 7.53139V7.47156C14.2119 4.26078 11.8175 2.59556 8.25092 2.59556H2.58804V12.4772L8.07209 12.5171Z" fill="white" />
             <path d="M21.5935 1.38904C21.5779 1.21262 21.5991 1.03487 21.6556 0.867114C21.7122 0.699353 21.803 0.545245 21.9221 0.414596C22.0412 0.283947 22.1862 0.179616 22.3477 0.108238C22.5092 0.0368607 22.6837 0 22.8602 0C23.0366 0 23.2112 0.0368607 23.3727 0.108238C23.5342 0.179616 23.6791 0.283947 23.7982 0.414596C23.9174 0.545245 24.0081 0.699353 24.0647 0.867114C24.1213 1.03487 24.1425 1.21262 24.1269 1.38904V21.611C24.1425 21.7874 24.1213 21.9651 24.0647 22.1329C24.0081 22.3006 23.9174 22.4548 23.7982 22.5854C23.6791 22.7161 23.5342 22.8204 23.3727 22.8918C23.2112 22.9631 23.0366 23 22.8602 23C22.6837 23 22.5092 22.9631 22.3477 22.8918C22.1862 22.8204 22.0412 22.7161 21.9221 22.5854C21.803 22.4548 21.7122 22.3006 21.6556 22.1329C21.5991 21.9651 21.5779 21.7874 21.5935 21.611V1.38904Z" fill="white" />
@@ -26,16 +26,16 @@
     <div class="site-navigation">
       <div class="site-navigation__box">
         <ul class="site-navigation__list">
-          <li class="site-navigation__item">
+          <li class="site-navigation__item site-navigation__item--box">
             <a href="#">Главная</a>
           </li>
-          <li class="site-navigation__item">
+          <li class="site-navigation__item site-navigation__item--box">
             <a href="photos.html">Фотографии</a>
           </li>
-          <li class="site-navigation__item">
+          <li class="site-navigation__item site-navigation__item--box">
             <a href="contest.html">Конкурс</a>
           </li>
-          <li class="site-navigation__item">
+          <li class="site-navigation__item site-navigation__item--box">
             <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
@@ -46,9 +46,11 @@
     <h1 class="visually-hidden">Pink - это мобильное приложение для раскрашивания серых будней в розоавй цвет</h1>
     <div class="caption caption--box">
       <h2 class="caption__slogan container">Взгляните на жизнь иначе!</h2>
-      <img class="caption__img-hand-phone" src="img/index/hand-phone.png" width="320" height="268" alt="Мобильный телефон в вашей руке">
-      <img class="caption__img-phone-screen" src="img/index/screen-house.jpg" width="111" height="197" alt="Изображение на экране мобильного телефона">
-      <div class="caption__links caption__links--box">
+      <div class="caption__img">
+        <img class="caption__img-hand-phone" src="img/index/hand-phone.png" width="320" height="268" alt="Мобильный телефон в вашей руке">
+        <img class="caption__img-phone-screen" src="img/index/screen-house.jpg" width="111" height="197" alt="Изображение на экране мобильного телефона">
+      </div>
+      <div class="caption__links caption__links--box container">
         <a class="caption__link caption__link--box" href="#">Скачать приложение</a>
         <ul class="caption__links-icon-list container">
           <li class="caption__links-icon-item">
@@ -85,10 +87,10 @@
     <div class="info">
       <h2 class="visually-hidden">Хотите узнать какой эффект будет после установки нашего приложения?</h2>
       <div class="info__offers container">
-        <p class="info__offers-ask">Устали от серости мегаполиса?</p>
-        <p class="info__offers-answer">Нам есть, что вам предложить!</p>
+        <p class="info__offers-text">Устали от серости мегаполиса?</p>
+        <p class="info__offers-text info__offers-text--box">Нам есть, что вам предложить!</p>
       </div>
-      <div class="info__effects info__effects--background">
+      <div class="info__effects info__effects--box">
         <ul class="info__effects-list container">
           <li class="info__effects-item">
             <h3 class="info__effects-caption">Поднимает настроение</h3>
@@ -104,70 +106,85 @@
           </li>
         </ul>
         <div class="info__effects-img">
-          <ul class="info__effects-img-list">
+          <ul class="info__effects-img-list container">
             <li class="info__effects-img-item">
-              <img class="info__effects-img-phone" src="img/index/phone.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
-              <img class="info__effects-img-screen" src="img/index/screen-garbage-one.jpg" width="136" height="245" alt="Любая фотография, например, баки для мусора">
+              <img class="info__effects-img-phone info__effects-img-phone-one" src="img/index/phone.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
+              <img class="info__effects-img-screen info__effects-img-screen-one" src="img/index/screen-garbage-one.jpg" width="136" height="245" alt="Любая фотография, например, баки для мусора">
             </li>
             <li class="info__effects-img-item">
-              <img class="info__effects-img-phone" src="img/index/phone.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
-              <img class="info__effects-img-screen" src="img/index/screen-garbage-two.jpg" width="136" height="245" alt="На фотографию наложен малиновый фильтр">
+              <img class="info__effects-img-phone info__effects-img-phone-two" src="img/index/phone.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
+              <img class="info__effects-img-screen info__effects-img-screen-two" src="img/index/screen-garbage-two.jpg" width="136" height="245" alt="На фотографию наложен малиновый фильтр">
             </li>
             <li class="info__effects-img-item">
-              <img class="info__effects-img-phone" src="img/index/phone.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
-              <img class="info__effects-img-screen" src="img/index/screen-garbage-three.jpg" width="136" height="245" alt="Фотография с фильтром украшена смайликом и подписью">
+              <img class="info__effects-img-phone info__effects-img-phone-three" src="img/index/phone.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
+              <img class="info__effects-img-screen info__effects-img-screen-three" src="img/index/screen-garbage-three.jpg" width="136" height="245" alt="Фотография с фильтром украшена смайликом и подписью">
             </li>
           </ul>
         </div>
       </div>
-      <div class="review slide slide--current">
-        <div class="researchtion researchtion--box container">
-          <div class="researchtion__img">
-            <svg width="238" height="276" viewBox="0 0 238 276" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M211.314 81.6277L215.587 77.3408C221.752 71.1663 222.878 62.1925 218.086 57.4017C213.294 52.6109 204.334 53.7227 198.176 59.8971L193.871 64.208C176.746 50.2779 156.074 41.4187 134.187 38.6304V30.9603H140.305C149.019 30.9603 156.151 23.994 156.151 15.4842C156.151 6.97427 149.019 0 140.305 0H97.7208C89.0075 0 81.8755 6.96627 81.8755 15.4842C81.8755 24.002 89.0075 30.9603 97.7208 30.9603H103.839V38.6304C77.6967 41.9933 53.4093 53.9522 34.7872 72.6308C16.1652 91.3093 4.26218 115.651 0.945904 141.835C-2.37038 168.02 3.08771 194.566 16.4638 217.309C29.8399 240.052 50.377 257.704 74.8528 267.496C99.3286 277.288 126.358 278.665 151.7 271.412C177.042 264.16 199.263 248.687 214.875 227.421C230.488 206.156 238.609 180.302 237.964 153.915C237.32 127.529 227.946 102.103 211.314 81.6277ZM119.013 244.947C101.61 244.947 84.5984 239.779 70.1286 230.097C55.6589 220.414 44.3813 206.652 37.7219 190.551C31.0625 174.45 29.3205 156.733 32.7162 139.64C36.1119 122.547 44.4927 106.847 56.7989 94.5241C69.105 82.2015 84.7837 73.81 101.852 70.411C118.921 67.012 136.613 68.7581 152.69 75.4285C168.768 82.0989 182.509 93.3939 192.176 107.885C201.844 122.377 207.003 139.413 207.001 156.841C206.999 180.209 197.728 202.619 181.227 219.142C164.726 235.665 142.348 244.947 119.013 244.947Z" fill="#DEDEDE"/>
-            </svg>
-            <svg width="202" height="202" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="101" cy="101" r="93" stroke="#D22856" stroke-width="16"/>
-            </svg>
-            <svg width="106" height="70" viewBox="0 0 106 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M48.9062 70H1V59.9219L18.2031 42.5312C23.2969 37.3125 26.625 33.7031 28.1875 31.7031C29.75 29.6719 30.875 27.7969 31.5625 26.0781C32.25 24.3594 32.5938 22.5781 32.5938 20.7344C32.5938 17.9844 31.8281 15.9375 30.2969 14.5938C28.7969 13.25 26.7812 12.5781 24.25 12.5781C21.5938 12.5781 19.0156 13.1875 16.5156 14.4062C14.0156 15.625 11.4062 17.3594 8.6875 19.6094L0.8125 10.2812C4.1875 7.40625 6.98438 5.375 9.20312 4.1875C11.4219 3 13.8438 2.09375 16.4688 1.46875C19.0938 0.8125 22.0312 0.484375 25.2812 0.484375C29.5625 0.484375 33.3438 1.26563 36.625 2.82812C39.9062 4.39062 42.4531 6.57812 44.2656 9.39062C46.0781 12.2031 46.9844 15.4219 46.9844 19.0469C46.9844 22.2031 46.4219 25.1719 45.2969 27.9531C44.2031 30.7031 42.4844 33.5312 40.1406 36.4375C37.8281 39.3438 33.7344 43.4844 27.8594 48.8594L19.0469 57.1562V57.8125H48.9062V70ZM105.297 55.7969H97.0469V70H82.8906V55.7969H53.6406V45.7188L83.6875 1.46875H97.0469V44.5469H105.297V55.7969ZM82.8906 44.5469V32.9219C82.8906 30.9844 82.9688 28.1719 83.125 24.4844C83.2812 20.7969 83.4062 18.6563 83.5 18.0625H83.125C81.9688 20.625 80.5781 23.125 78.9531 25.5625L66.3906 44.5469H82.8906Z" fill="#D22856"/>
-            </svg>
+      <div class="researchtion researchtion--box container">
+        <div class="researchtion__img">
+          <svg class="researchtion__img-clock" width="238" height="276" viewBox="0 0 238 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M211.314 81.6277L215.587 77.3408C221.752 71.1663 222.878 62.1925 218.086 57.4017C213.294 52.6109 204.334 53.7227 198.176 59.8971L193.871 64.208C176.746 50.2779 156.074 41.4187 134.187 38.6304V30.9603H140.305C149.019 30.9603 156.151 23.994 156.151 15.4842C156.151 6.97427 149.019 0 140.305 0H97.7208C89.0075 0 81.8755 6.96627 81.8755 15.4842C81.8755 24.002 89.0075 30.9603 97.7208 30.9603H103.839V38.6304C77.6967 41.9933 53.4093 53.9522 34.7872 72.6308C16.1652 91.3093 4.26218 115.651 0.945904 141.835C-2.37038 168.02 3.08771 194.566 16.4638 217.309C29.8399 240.052 50.377 257.704 74.8528 267.496C99.3286 277.288 126.358 278.665 151.7 271.412C177.042 264.16 199.263 248.687 214.875 227.421C230.488 206.156 238.609 180.302 237.964 153.915C237.32 127.529 227.946 102.103 211.314 81.6277ZM119.013 244.947C101.61 244.947 84.5984 239.779 70.1286 230.097C55.6589 220.414 44.3813 206.652 37.7219 190.551C31.0625 174.45 29.3205 156.733 32.7162 139.64C36.1119 122.547 44.4927 106.847 56.7989 94.5241C69.105 82.2015 84.7837 73.81 101.852 70.411C118.921 67.012 136.613 68.7581 152.69 75.4285C168.768 82.0989 182.509 93.3939 192.176 107.885C201.844 122.377 207.003 139.413 207.001 156.841C206.999 180.209 197.728 202.619 181.227 219.142C164.726 235.665 142.348 244.947 119.013 244.947Z" fill="#DEDEDE"/>
+          </svg>
+          <svg class="researchtion__img-displey" width="202" height="202" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="101" cy="101" r="93" stroke="#D22856" stroke-width="16"/>
+          </svg>
+          <svg class="researchtion__img-time" width="106" height="70" viewBox="0 0 106 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48.9062 70H1V59.9219L18.2031 42.5312C23.2969 37.3125 26.625 33.7031 28.1875 31.7031C29.75 29.6719 30.875 27.7969 31.5625 26.0781C32.25 24.3594 32.5938 22.5781 32.5938 20.7344C32.5938 17.9844 31.8281 15.9375 30.2969 14.5938C28.7969 13.25 26.7812 12.5781 24.25 12.5781C21.5938 12.5781 19.0156 13.1875 16.5156 14.4062C14.0156 15.625 11.4062 17.3594 8.6875 19.6094L0.8125 10.2812C4.1875 7.40625 6.98438 5.375 9.20312 4.1875C11.4219 3 13.8438 2.09375 16.4688 1.46875C19.0938 0.8125 22.0312 0.484375 25.2812 0.484375C29.5625 0.484375 33.3438 1.26563 36.625 2.82812C39.9062 4.39062 42.4531 6.57812 44.2656 9.39062C46.0781 12.2031 46.9844 15.4219 46.9844 19.0469C46.9844 22.2031 46.4219 25.1719 45.2969 27.9531C44.2031 30.7031 42.4844 33.5312 40.1406 36.4375C37.8281 39.3438 33.7344 43.4844 27.8594 48.8594L19.0469 57.1562V57.8125H48.9062V70ZM105.297 55.7969H97.0469V70H82.8906V55.7969H53.6406V45.7188L83.6875 1.46875H97.0469V44.5469H105.297V55.7969ZM82.8906 44.5469V32.9219C82.8906 30.9844 82.9688 28.1719 83.125 24.4844C83.2812 20.7969 83.4062 18.6563 83.5 18.0625H83.125C81.9688 20.625 80.5781 23.125 78.9531 25.5625L66.3906 44.5469H82.8906Z" fill="#D22856"/>
+          </svg>
+        </div>
+        <div class="researchtion__desc">
+          <p class="researchtion__desc-cap">Эффект на 24 часа!</p>
+          <p class="researchtion__desc-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="researchtion__desc-link" href="#" aria-label="Переход на страницу британского исследования">Узнать больше об исследовании</a>
+        </div>
+      </div>
+      <div class="reviews container">
+        <svg class="reviews__icon" width="79" height="63" viewBox="0 0 79 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M35.1468 6.97257L30.8388 0C28.3886 1.48142 0 12.0588 0 39.1293C0 46.2698 0.341426 63 18.9793 63C30.2162 63 32.9778 52.8473 32.9778 49.5783C32.9778 27.8508 11.5081 35.5838 11.5081 35.5838C11.5081 17.7771 31.3911 9.06631 35.1468 6.97257Z" fill="#EFEFEF"/>
+          <path d="M79 6.97257L74.7322 0C72.302 1.48142 43.8833 12.0588 43.8833 39.1293C43.8833 46.2698 44.2247 63 62.8726 63C74.0995 63 76.8611 52.8473 76.8611 49.5783C76.8611 27.8508 55.3914 35.5838 55.3914 35.5838C55.3914 17.7771 75.3146 9.06631 79 6.97257Z" fill="#EFEFEF"/>
+        </svg>
+        <svg class="reviews__arrow-slider-button reviews__arrow-left-slider-button slide slide-current" width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.3" d="M2.03912 20.5035L21.7252 1.4144C21.8048 1.3379 21.8681 1.24683 21.9112 1.14646C21.9544 1.04608 21.9766 0.938398 21.9766 0.829635C21.9766 0.720871 21.9544 0.613187 21.9112 0.512814C21.8681 0.41244 21.8048 0.321369 21.7252 0.24487C21.6455 0.167255 21.5508 0.105671 21.4466 0.0636507C21.3423 0.0216304 21.2305 0 21.1177 0C21.0048 0 20.893 0.0216304 20.7887 0.0636507C20.6845 0.105671 20.5898 0.167255 20.5101 0.24487L0.252266 19.9088C0.172306 19.9862 0.108863 20.0781 0.0655731 20.1793C0.0222837 20.2805 0 20.389 0 20.4985C0 20.6081 0.0222837 20.7166 0.0655731 20.8178C0.108863 20.919 0.172306 21.0109 0.252266 21.0883L20.5101 40.7621C20.6747 40.9157 20.8945 41.001 21.1228 41C21.2912 40.9985 21.4555 40.9488 21.5951 40.8572C21.7346 40.7656 21.8433 40.6362 21.9076 40.485C21.9718 40.3339 21.9888 40.1677 21.9564 40.0072C21.9239 39.8467 21.8435 39.6991 21.7252 39.5827L2.03912 20.5035Z" fill="#283645"/>
+        </svg>
+        <div class="review slide slide--current">
+          <div class="review__review">
+            <div class="review__author">
+              <h3 class="review__author-name">Николай Петров</h3>
+              <p class="review__author-about">25 лет, водитель трамвая</p>
+            </div>
+            <p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!/&laquo;</p>
           </div>
-          <div class="researchtion__desc">
-            <p class="researchtion__desc-cap">Эффект на 24 часа!</p>
-            <p class="researchtion__desc-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a class="researchtion__desc-link" href="#" aria-label="Переход на страницу британского исследования">Узнать больше об исследовании</a>
+          <div class="reviews__slider">
+            <button class="review__point-slider-button" type="button" aria-label="Первый слайд">
+              <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/>
+              </svg>
+            </button>
+            <button class="review__point-slider-button review__slider-button--current" type="button" aria-label="Текущий слайд">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="6" cy="6" r="4.5" fill="white" stroke="#283645" stroke-width="3"/>
+              </svg>
+            </button>
+            <button class="review__point-slider-button" type="button" aria-label="Второй слайд">
+              <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/>
+              </svg>
+            </button>
+            <button class="review__point-slider-button" type="button" aria-label="Третий слайд">
+              <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/>
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="review container slide slide--current">
-        <h3 class="review__author-name">Николай Петров</h3>
-        <p class="review__author-about">25 лет, водитель трамвая</p>
-        <p class="review__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!/&laquo;</p>
-      </div>
-      <div class="review__slider">
-        <button class="review__slider-button" type="button" aria-label="Первый слайд">
-          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/>
-          </svg>
-        </button>
-        <button class="review__slider-button review__slider-button--current" type="button" aria-label="Текущий слайд">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="6" cy="6" r="4.5" fill="white" stroke="#283645" stroke-width="3"/>
-          </svg>
-        </button>
-        <button class="review__slider-button" type="button" aria-label="Второй слайд">
-          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/>
-          </svg>
-        </button>
-        <button class="review__slider-button" type="button" aria-label="Третий слайд">
-          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle opacity="0.3" cx="3" cy="3" r="3" fill="#283645"/>
-          </svg>
-        </button>
+        <svg class="reviews__arrow-slider-button reviews__arrow-right-slider-button slide slide-current" width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.3" d="M19.9609 20.4965L0.274809 39.5856C0.19516 39.6621 0.131931 39.7532 0.0887779 39.8535C0.0456247 39.9539 0.0234055 40.0616 0.0234055 40.1704C0.0234055 40.2791 0.0456247 40.3868 0.0887779 40.4872C0.131931 40.5876 0.19516 40.6786 0.274809 40.7551C0.354491 40.8327 0.449175 40.8943 0.553429 40.9363C0.657683 40.9784 0.769458 41 0.882342 41C0.995226 41 1.107 40.9784 1.21125 40.9363C1.31551 40.8943 1.41019 40.8327 1.48987 40.7551L21.7477 21.0912C21.8277 21.0138 21.8911 20.9219 21.9344 20.8207C21.9777 20.7195 22 20.611 22 20.5015C22 20.3919 21.9777 20.2834 21.9344 20.1822C21.8911 20.081 21.8277 19.9891 21.7477 19.9117L1.48987 0.237876C1.32528 0.0842936 1.10554 -0.00102426 0.877235 7.46231e-06C0.708774 0.00154086 0.544509 0.0511971 0.404938 0.14278C0.265368 0.234363 0.156674 0.363813 0.0924197 0.514982C0.0281659 0.66615 0.0111984 0.832339 0.0436344 0.992809C0.0760703 1.15328 0.156472 1.30093 0.274809 1.41732L19.9609 20.4965Z" fill="#283645"/>
+        </svg>
       </div>
     </div>
-    <div class="cost">
+    <div class="cost container">
       <h2 class="visually-hidden">Тарифы и перечень услуг, которые входят в тариф</h2>
       <table class="cost__table">
         <tr class="cost__tarif-list">
@@ -252,17 +269,19 @@
       <div class="contacts__contacts container">
         <p class="contacts__caption">Остались вопросы?</p>
         <p class="contacts__caption">Свяжитесьс нами!</p>
-        <div class="contacts__tel">
-          <p class="contacts__speech">Звоните:</p>
-          <a class="contacts__info" href="tel:+78125556666" aria-label="Номер телефона компании Pink +78125556666">+7 (812) 555-66-66</a>
-        </div>
-        <div class="contacts__email">
-          <p class="contacts__speech">Пишите:</p>
-          <a class="contacts__info" href="mailto:mail@htmlacademy.ru" aria-label="Элекртонная почта компании Pink mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div class="contacts__address">
-          <p class="contacts__speech">Приезжайте в гости:</p>
-          <a class="contacts__info" href="#" aria-label="Почтовый адресс компании Pink г. Санкт-Петербург, ул. Большая Конюшенная, 19/8">ул. Большая Конюшенная, 19/8</a>
+        <div class="contacts__category">
+          <div class="contacts__tel">
+            <p class="contacts__speech">Звоните:</p>
+            <a class="contacts__info" href="tel:+78125556666" aria-label="Номер телефона компании Pink +78125556666">+7 (812) 555-66-66</a>
+          </div>
+          <div class="contacts__email">
+            <p class="contacts__speech">Пишите:</p>
+            <a class="contacts__info" href="mailto:mail@htmlacademy.ru" aria-label="Элекртонная почта компании Pink mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
+          <div class="contacts__address">
+            <p class="contacts__speech">Приезжайте в гости:</p>
+            <a class="contacts__info" href="#" aria-label="Почтовый адресс компании Pink г. Санкт-Петербург, ул. Большая Конюшенная, 19/8">ул. Большая Конюшенная, 19/8</a>
+          </div>
         </div>
       </div>
       <div class="contacts__map">
