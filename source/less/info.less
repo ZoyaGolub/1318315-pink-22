@@ -1,30 +1,59 @@
 // Info
 
 .info__offers {
-  margin: 46px 0 70px;
+  margin: 200px 0 70px;
 }
 
-.info__offers-ask {
+.info__offers-text {
   color: @black-blue;
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
+  text-align: center;
 }
 
-.info__offers-answer {
-  color: @black-blue;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 120%;
+.info__offers-text--box {
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 30%;
+  }
 }
 
-.info__effects--background {
-  background-image: url(../img/index/grey-background.png) no-repeat center;
+.info__effects--box {
+  background-image: url("../img/index/grey-background.png") no-repeat center;
+}
+
+.info__effects {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-rows: min-content min-content;
+  }
 }
 
 .info__effects-list {
   margin-top: 129px;
   margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10%;
+    width: 78%;
+  }
 }
 
 .info__effects-item {
@@ -37,6 +66,7 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
+  text-align: center;
 }
 
 .info__effects-text {
@@ -44,4 +74,69 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+  text-align: center;
 }
+
+.info__effects-img-list {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 68%;
+  }
+}
+
+.info__effects-img-item {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.info__effects-img-phone {
+  position: relative;
+}
+
+.info__effects-img-screen {
+  position: absolute;
+  padding: 38px 11px;
+}
+
+.info__effects-img-phone-one {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.info__effects-img-screen-one {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.info__effects-img-phone-two {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.info__effects-img-screen-two {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+/*.info__effects-img-phone-three {
+  display: flex;
+}
+
+.info__effects-img-screen-three {
+  display: flex;
+}*/
