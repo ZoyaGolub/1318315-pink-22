@@ -3,15 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <header class="container">
-    <div class="logo logo--box">
-      <div class="logo__logo">
-        <a class="logo__name" href="#" aria-label="Логотип компании Pink">
+  <header class="header container">
+    <div class="header__logo header__logo--box">
+      <div class="header__logo-icon">
+        <a class="header__logo-name" href="#" aria-label="Логотип компании Pink">
           <svg width="74" height="23" viewBox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.00496827 1.54857C0.00487772 1.21254 0.135804 0.889818 0.369742 0.649431C0.60368 0.409043 0.922049 0.27008 1.25676 0.262266H8.39001C13.4469 0.262266 16.7751 2.9645 16.7751 7.39179V7.45162C16.7751 12.2977 12.7415 14.8105 7.97274 14.8105H2.53836V21.611C2.55394 21.7874 2.53277 21.9651 2.47619 22.1329C2.41961 22.3006 2.32887 22.4547 2.20973 22.5854C2.09058 22.716 1.94565 22.8204 1.78416 22.8918C1.62266 22.9631 1.44812 23 1.27166 23C1.0952 23 0.920671 22.9631 0.759173 22.8918C0.597674 22.8204 0.452744 22.716 0.333602 22.5854C0.21446 22.4547 0.123708 22.3006 0.0671295 22.1329C0.0105515 21.9651 -0.0106138 21.7874 0.00496827 21.611V1.54857ZM8.07209 12.5171C11.7778 12.5171 14.2119 10.5228 14.2119 7.53139V7.47156C14.2119 4.26078 11.8175 2.59556 8.25092 2.59556H2.58804V12.4772L8.07209 12.5171Z" fill="white" />
             <path d="M21.5935 1.38904C21.5779 1.21262 21.5991 1.03487 21.6556 0.867114C21.7122 0.699353 21.803 0.545245 21.9221 0.414596C22.0412 0.283947 22.1862 0.179616 22.3477 0.108238C22.5092 0.0368607 22.6837 0 22.8602 0C23.0366 0 23.2112 0.0368607 23.3727 0.108238C23.5342 0.179616 23.6791 0.283947 23.7982 0.414596C23.9174 0.545245 24.0081 0.699353 24.0647 0.867114C24.1213 1.03487 24.1425 1.21262 24.1269 1.38904V21.611C24.1425 21.7874 24.1213 21.9651 24.0647 22.1329C24.0081 22.3006 23.9174 22.4548 23.7982 22.5854C23.6791 22.7161 23.5342 22.8204 23.3727 22.8918C23.2112 22.9631 23.0366 23 22.8602 23C22.6837 23 22.5092 22.9631 22.3477 22.8918C22.1862 22.8204 22.0412 22.7161 21.9221 22.5854C21.803 22.4548 21.7122 22.3006 21.6556 22.1329C21.5991 21.9651 21.5779 21.7874 21.5935 21.611V1.38904Z" fill="white" />
@@ -42,103 +43,114 @@
     </div>
   </header>
   <main>
-    <div class="main-speech main-speech--box container">
-      <h1 class="main-speech__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    <div class="main-speech main-speech--box">
+      <h1 class="main-speech__header main-speech__header--box">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </div>
-    <p class="main-speech__offer">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-    <p class="main-speech__fill">Пожалуйста, заполните форму ниже:</p>
+    <p class="main-speech__offer main-speech__offer--box container">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="main-speech__fill"> Пожалуйста, заполните форму ниже:</span></p>
     <form class="form" id="contest" action="https://echo.htmlacademy.ru" method="post">
-      <ul class="form__human-name form__human-name-list">
-        <li class="form__human-name-item form__human-name-surname">
-          <label class="form__name" for="form__surname">Фамилия</label>
-          <input class="form__text form__text--box" id="form__surname" type="text" name="name" form="contest" placeholder="Укажите фамилию" required>
-        </li>
-        <li class="form__human-name-item form__human-name-name">
-          <label class="form__name" for="form__name">Имя</label>
-          <input class="form__text form__text--box" id="form__name" type="text" name="name" form="contest"  placeholder="Введите ваше имя" required>
-        </li>
-        <li class="form__human-name-item form__human-name-patronymic">
-          <label class="form__name" for="form__patronymic">Отчетво</label>
-          <input class="form__text form__text--box" id="form__patronymic" type="text" name="name" form="contest" placeholder="Ну и отчество тоже">
-        </li>
-      </ul>
-      <fieldset class="form__os">
-        <legend class="form__question form__os-question">С каким приложением путешествовали?</legend>
-        <ul class="form__os-answer-list">
-          <li class="form__os-answer-item">
-            <label class="form__list-position" for="Pink_для_iOS">Pink для iOS</label>
-            <input class="visually-hidden form__input-radio" id="Pink_для_iOS" type="radio" name="os" form="contest" value="Pink для iOS" checked>
+      <div class="form__order">
+        <ul class="form__human-name form__human-name-list">
+          <li class="form__human-name-item form__human-name-surname">
+            <label class="form__name form__name--box" for="form__surname">Фамилия</label>
+            <input class="form__text form__text--box" id="form__surname" type="text" name="name" form="contest" placeholder="Укажите фамилию *" required>
           </li>
-          <li class="form__os-answer-item">
-            <label class="form__list-position" for="Pink_на_Android">Pink на Android</label>
-            <input class="visually-hidden form__input-radio" id="Pink_на_Android" type="radio" name="os" form="contest" value="Pink на Android">
+          <li class="form__human-name-item form__human-name-name">
+            <label class="form__name form__name--box" for="form__name">Имя</label>
+            <input class="form__text form__text--box" id="form__name" type="text" name="name" form="contest"  placeholder="Введите ваше имя *" required>
           </li>
-          <li class="form__os-answer-item">
-            <label class="form__list-position" for="Windows_Phone">Windows Phone</label>
-            <input class="visually-hidden form__input-radio" id="Windows_Phone" type="radio" name="os" form="contest" value="Windows Phone">
+          <li class="form__human-name-item form__human-name-patronymic">
+            <label class="form__name form__name--box" for="form__patronymic">Отчество</label>
+            <input class="form__text form__text--box" id="form__patronymic" type="text" name="name" form="contest" placeholder="Ну и отчество тоже">
           </li>
         </ul>
-      </fieldset>
-      <fieldset class="form__contacts">
-        <legend class="form__question form__contacts-question">Контактная информация</legend>
-        <ul class="form__contacts-answer-list">
-          <li class="form__contacts-answer-item">
-            <input class="form__text form__text--box" id="form__tel" type="tel" name="tel" form="contest" placeholder="Номер, пожалуйста">
-            <label class="form__question" for="form__tel">Номер телефона</label>
-          </li>
-          <li class="form__os-answer-item">
-            <input class="form__text form__text--box" id="form__email" type="email" name="email" form="contest" placeholder="Введите почту" required>
-            <label class="form__question" for="form__email">Адрес почты</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="form__progress">
-        <legend class="form__question form__progress-question">Ваши безбашенные достижения в путешествии</legend>
-        <ul class="form__progress-answer-list">
-          <li class="form__progress-answer-item">
-            <label class="form__list-position" for="Сделал_селфи_с_акулой">Сделал селфи с акулой</label>
-            <input class="visually-hidden form__input-checkbox" id="Сделал_селфи_с_акулой" type="checkbox" name="progress" form="contest" value="Сделал селфи с акулой" checked>
-          </li>
-          <li class="form__progress-answer-item">
-            <label class="form__list-position" for="Обгорел_на_пляже">Обгорел на пляже</label>
-            <input class="visually-hidden form__input-checkbox" id="Обгорел_на_пляже" type="checkbox" name="progress" form="contest" value="Обгорел на пляже" checked>
-          </li>
-          <li class="form__progress-answer-item">
-            <label class="form__list-position" for="Видел_Чака_Норриса">Видел Чака Норриса</label>
-            <input class="visually-hidden form__input-checkbox" id="Видел_Чака_Норриса" type="checkbox" name="progress" form="contest" value="Видел Чака Норриса">
-          </li>
-          <li class="form__progress-answer-item">
-            <label class="form__list-position" for="Накупил_сувениров">Накупил сувениров</label>
-            <input class="visually-hidden form__input-checkbox" id="Накупил_сувениров" type="checkbox" name="progress" form="contest" value="Накупил сувениров">
-          </li>
-          <li class="form__progress-answer-item">
-            <label class="form__list-position" for="Удержал_башню">Удержал башню</label>
-            <input class="visually-hidden form__input-checkbox" id="Удержал_башню" type="checkbox" name="progress" form="contest"  value="Удержал башню" checked>
-          </li>
-          <li class="form__progress-answer-item">
-            <label class="form__list-position" for="Разгромил_отель">Разгромил отель</label>
-            <input class="visually-hidden form__input-checkbox" id="Разгромил_отель" type="checkbox" name="progress" form="contest" value="Разгромил отель">
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="form__comments">
-        <legend class="form__question form__comments-question">Опишите свои эмоции</legend>
-        <label class="visually-hidden" for="form__comments"></label>
-        <input class="form__text form__comments-answer form__comments-answer--box" id="form__comments" type="text" name="comments" form="contest" placeholder="Можно прям в красках, не стесняясь в выражениях">
-      </fieldset>
-      <button class="form__button form__button--box" type="submit" aria-label="Отправка заполненой формы на конкурс"></button>
-      <p class="form__footnote"><span class="form__footnote-star">*</span> - Обязательные поля</p>
+        <div class="form__os form__os--box">
+          <fieldset class="form__caption form__os-ask container">
+            <legend class="form__question form__question--box form__os-question">С каким приложением путешествовали?</legend>
+            <ul class="form__os-answer-list">
+              <li class="form__os-answer-item">
+                <label class="form__list-position" for="Pink_для_iOS">Pink для iOS</label>
+                <input class="visually-hidden form__input-radio" id="Pink_для_iOS" type="radio" name="os" form="contest" value="Pink для iOS" checked>
+              </li>
+              <li class="form__os-answer-item">
+                <label class="form__list-position" for="Pink_на_Android">Pink на Android</label>
+                <input class="visually-hidden form__input-radio" id="Pink_на_Android" type="radio" name="os" form="contest" value="Pink на Android">
+              </li>
+              <li class="form__os-answer-item">
+                <label class="form__list-position" for="Windows_Phone">Windows Phone</label>
+                <input class="visually-hidden form__input-radio" id="Windows_Phone" type="radio" name="os" form="contest" value="Windows Phone">
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="form__caption form__contacts">
+          <legend class="form__question form__question--box form__contacts-question">Контактная информация</legend>
+          <ul class="form__contacts-answer-list">
+            <li class="form__contacts-answer-item">
+              <input class="form__text form__text--box" id="form__tel" type="tel" name="tel" form="contest" placeholder="Номер, пожалуйста">
+              <label class="form__name form__name--box" for="form__tel">Номер телефона</label>
+            </li>
+            <li class="form__os-answer-item">
+              <input class="form__text form__text--box" id="form__email" type="email" name="email" form="contest" placeholder="Введите почту *" required>
+              <label class="form__name form__name--box" for="form__email">Адрес почты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="form__progress form__progress--box">
+          <fieldset class="form__caption form__progress-ask">
+            <legend class="form__question form__question--box form__progress-question container">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="form__progress-answer-list container">
+              <li class="form__progress-answer-item">
+                <label class="form__list-position" for="Сделал_селфи_с_акулой">Сделал селфи с акулой</label>
+                <input class="visually-hidden form__input-checkbox" id="Сделал_селфи_с_акулой" type="checkbox" name="progress" form="contest" value="Сделал селфи с акулой" checked>
+              </li>
+              <li class="form__progress-answer-item">
+                <label class="form__list-position" for="Обгорел_на_пляже">Обгорел на пляже</label>
+                <input class="visually-hidden form__input-checkbox" id="Обгорел_на_пляже" type="checkbox" name="progress" form="contest" value="Обгорел на пляже" checked>
+              </li>
+              <li class="form__progress-answer-item">
+                <label class="form__list-position" for="Видел_Чака_Норриса">Видел Чака Норриса</label>
+                <input class="visually-hidden form__input-checkbox" id="Видел_Чака_Норриса" type="checkbox" name="progress" form="contest" value="Видел Чака Норриса">
+              </li>
+              <li class="form__progress-answer-item">
+                <label class="form__list-position" for="Накупил_сувениров">Накупил сувениров</label>
+                <input class="visually-hidden form__input-checkbox" id="Накупил_сувениров" type="checkbox" name="progress" form="contest" value="Накупил сувениров">
+              </li>
+              <li class="form__progress-answer-item">
+                <label class="form__list-position" for="Удержал_башню">Удержал башню</label>
+                <input class="visually-hidden form__input-checkbox" id="Удержал_башню" type="checkbox" name="progress" form="contest"  value="Удержал башню" checked>
+              </li>
+              <li class="form__progress-answer-item">
+                <label class="form__list-position" for="Разгромил_отель">Разгромил отель</label>
+                <input class="visually-hidden form__input-checkbox" id="Разгромил_отель" type="checkbox" name="progress" form="contest" value="Разгромил отель">
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="form__caption form__comments container">
+          <legend class="form__question form__question--box form__comments-question">Опишите свои эмоции</legend>
+          <label class="visually-hidden" for="form__comments"></label>
+          <textarea class="form__text form__comments-answer form__comments-answer--box" id="form__comments" type="text" name="comments" form="contest" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </fieldset>
+      </div>
+      <div class="form__button form__button--box">
+        <button class="form__button-send form__button-send--box" type="submit" aria-label="Отправка заполненой формы на конкурс">Отправить форму</button>
+        <p class="form__footnote form__footnote--box"><span class="form__footnote-star">*</span> - Обязательные поля</p>
+      </div>
     </form>
   </main>
   <div class="popup popup-error popup--box">
-    <h2 class="popup__caption">Что-то пошло не так!</h2>
-    <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button class="popup__button popup__button--box popup-error__button--box" type="reset" aria-label="Закрытие окна и возврат на страницу">Ок</button>
+    <h2 class="popup__caption popup__caption--box">Что-то пошло не так!</h2>
+    <p class="popup__text popup__text--box popup-error__text popup-error__text--box">Проверьте поля, выделенные красным, скорее всего&nbsp;вы&nbsp;забыли их заполнить</p>
+    <div class="popup-error__button popup-error__button--box">
+      <button class="popup__button popup__button--box" type="reset" aria-label="Закрытие окна и возврат на страницу">Ок</button>
+    </div>
   </div>
   <div class="popup popup-succes popup--box">
-    <h2 class="popup__caption">Ваша заявка отправлена</h2>
-    <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-    <button class="popup__button popup__button--box popup-succes__button--box" type="button" aria-label="Закрытие окна и возврат на страницу">Ок</button>
+    <h2 class="popup__caption popup__caption--box">Ваша заявка отправлена</h2>
+    <p class="popup__text popup__text--box popup-succes__text popup-succes__text--box">Спасибо за ваше участие, ваша заявка уже поступила&nbsp;к&nbsp;нам. В ближайшее время&nbsp;мы рассмотрим ее и оповестим&nbsp;вас.</p>
+    <div class="popup-succes__button popup-succes__button--box">
+      <button class="popup__button popup__button--box" type="button" aria-label="Закрытие окна и возврат на страницу">Закрыть окно</button>
+    </div>
   </div>
   <footer class="footer container">
     <div class="footer__logo">
