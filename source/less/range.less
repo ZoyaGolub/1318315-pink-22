@@ -1,15 +1,37 @@
 // Range
 
+.range {
+  width: 240px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    width: 253px;
+    height: min-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 380px;
+    height: min-content;
+  }
+}
+
 .range__icon {
   width: 48px;
   height: 48px;
-  margin: 10px;
+  margin: 13px;
 }
 
 .range__icon-crop {
   color: @red;
   width: 44px;
   height: 44px;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .range__icon-fill {
@@ -17,6 +39,18 @@
   opacity: 0.3;
   width: 48px;
   height: 43px;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    color: @red;
+    opacity: 1;
+    width: 24px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @red;
+    opacity: 1;
+  }
 }
 
 .range__icon-contrast {
@@ -24,6 +58,18 @@
   opacity: 0.3;
   width: 48px;
   height: 43px;
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    color: @red;
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @red;
+    opacity: 1;
+  }
 }
 
 .range__toggle {
@@ -32,10 +78,26 @@
   height: 2px;
 }
 
+.range__toggle-crop {
+  order: 2;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+  }
+}
+
 .range__toggle-fill {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
 }
 
 .range__toggle-contrast {
   display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
 }
