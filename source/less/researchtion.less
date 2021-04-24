@@ -6,6 +6,7 @@
 
 .researchtion--box {
   height: 330px;
+  padding-top: 50px;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     display: grid;
@@ -16,11 +17,17 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    background-color: @grey;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .researchtion__desc {
+.researchtion__desc {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    margin-left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: -1;
     padding-left: 10%;
@@ -32,7 +39,7 @@
   height: 276px;
   display: flex;
   justify-self: center;
-  padding-left: 10%;
+  /*padding-left: 10%;*/
 }
 
 .researchtion__img-clock {
@@ -54,6 +61,10 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+  }
 }
 
 .researchtion__desc-text {
@@ -61,6 +72,17 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .researchtion__desc-text--box {
+    width: 534px;
+  }
 }
 
 .researchtion__desc-link {

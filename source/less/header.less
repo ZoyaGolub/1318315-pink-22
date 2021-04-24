@@ -2,19 +2,31 @@
 
 .header__logo--box {
   display: flex;
-  /*flex-wrap: wrap;*/
   justify-content: space-between;
   background-color: @black-blue;
-  width: 69px;
   padding: 23px 20px;
+  box-shadow: 0 1px 0 @black;
 
-  @media (min-width: @tablet-width) {
-    width: 110px;
+  @media (min-width: @desktop-width) {
+    background-color: inherit;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .header {
+  .header--box {
+    background-color: @black;
+    opacity: 0.3;
+    width: 100%;
+  }
+
+  .header__navigation--box {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .header__navigation {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

@@ -1,5 +1,10 @@
 // Cost
 
+.cost--box {
+  width: 100%;
+  background-color: @grey;
+}
+
 .cost__tarif-name {
   color: @white;
   font-weight: bold;
@@ -25,12 +30,12 @@
 }
 
 .cost__slider {
-  display: flex;
-  width: 56px;
-  height: 6px;
-  align-items: center;
-
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.cost__slider--box {
+  margin-top: 45px;
+  margin-bottom: 49px;
 }
