@@ -5,12 +5,68 @@
   background-color: @grey;
 }
 
+.cost__table--box {
+  padding-top: 100px;
+  padding-bottom: 45px;
+
+  @media (min-width: @tablet-width) {
+      padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 160px;
+    padding-bottom: 98px;
+  }
+}
+
+.cost__tarif-item--dislpay-none {
+  @media (max-width: @mobail-width-only) {
+    display: none;
+  }
+}
+
+.cost__tarif-item--box {
+  background-color: @black-blue;
+  border: 2px solid @black-blue;
+  border-radius: 1px 0 0 0;
+  width: 98%; /*276px;*/
+  height: 90px;
+
+  @media (min-width: @tablet-width) {
+    width: 152px;
+    height: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 233px;
+    height: 94px;
+  }
+}
+
+.cost__tarif-item--mob-visually {
+  @media (max-width: @mobail-width-only) {
+    display: table-cell;
+  }
+}
+
+.cost__tarif-item--box-unlim {
+  border-radius: 0 1px 0 0;
+}
+
 .cost__tarif-name {
   color: @white;
   font-weight: bold;
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.cost__tarif-name--box {
+  margin-bottom: 0;
 }
 
 .cost__price {
@@ -19,6 +75,30 @@
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.cost__price--box {
+  margin-top: 0;
+}
+
+.cost__tarif-item--box-base {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: table-cell;
+  }
+}
+
+.cost__tarif-item--box-unlim {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: table-cell;
+  }
 }
 
 .cost__services-item {
@@ -26,16 +106,59 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
-  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
-.cost__slider {
+.cost__services-item--inside-text {
+  text-transform: uppercase;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
+.cost__services-item--box {
+  display: none;
+  width: 25%; /*153px;*/
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    display: table-cell;
+    padding: 17px 15px;
+  }
+}
+
+.cost__services-yes-no--box {
+  display: none;
+  width: 25%;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    display: table-cell;
+  }
+}
+
+.cost__services-yes-no--mob-visually {
+  @media (max-width: @mobail-width-only) {
+    display: table-cell;
+  }
+}
+
+.cost__choice--box {
+  @media (min-width: @tablet-width) {
+    padding: 10% 40%;
+  }
+}
+
 .cost__slider--box {
-  margin-top: 45px;
-  margin-bottom: 49px;
+  padding-bottom: 49px;
+}
+
+.cost__slider--tablet-none {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

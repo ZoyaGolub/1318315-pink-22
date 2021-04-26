@@ -158,10 +158,10 @@
             </div>
             <p class="review__text review__text--box">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
           </div>
-          <div class="slide-control slide-control--box reviews__slider reviews__slider--box">
-            <button class="slider-button slider-button--current review__point-slider-button review__slider-button--current" type="button" aria-label="Текущий слайд"></button>
-            <button class="slider-button review__point-slider-button" type="button" aria-label="Второй слайд"></button>
-            <button class="slider-button review__point-slider-button" type="button" aria-label="Третий слайд"></button>
+          <div class="slide-control slide-control--box reviews__slider reviews__slider--box reviews__slider--desktop-none">
+            <button class="slider-button slider-button--box slider-button--current review__point-slider-button review__slider-button--current" type="button" aria-label="Текущий слайд"></button>
+            <button class="slider-button slider-button--box review__point-slider-button" type="button" aria-label="Второй слайд"></button>
+            <button class="slider-button slider-button--box review__point-slider-button" type="button" aria-label="Третий слайд"></button>
           </div>
         </div>
         <svg class="reviews__arrow-slider-button reviews__arrow-slider-button--box reviews__arrow-right-slider-button slide slide-current" width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -171,66 +171,75 @@
     </div>
     <div class="cost cost--box">
       <h2 class="visually-hidden">Тарифы и перечень услуг, которые входят в тариф</h2>
-      <table class="cost__table container">
+      <table class="cost__table cost__table--box container">
         <tr class="cost__tarif-list">
-          <th class="cost__tarif-item">
-            <p class="cost__tarif-name"></p>
-            <p class="cost__price"></p>
+          <th class="cost__tarif-item cost__tarif-item--dislpay-none">
+            <p class="cost__tarif-name-none"></p>
+            <p class="cost__price-none"></p>
           </th>
-          <th class="cost__tarif-item slide-cost">
-            <p class="cost__tarif-name">База</p>
-            <p class="cost__price">1,99 usd</p>
+          <th class="cost__tarif-item cost__tarif-item--box cost__tarif-item--box-base slide-cost">
+            <p class="cost__tarif-name cost__tarif-name--box">База</p>
+            <p class="cost__price cost__price--box">1,99 usd</p>
           </th>
-          <th class="cost__tarif-item slide-cost slide-cost--current">
-            <p class="cost__tarif-name">Стандарт</p>
-            <p class="cost__price">3,99 usd</p>
+          <th class="cost__tarif-item cost__tarif-item--box cost__tarif-item--mob-visually cost__tarif-item--box-standard slide-cost slide-cost--current">
+            <p class="cost__tarif-name cost__tarif-name--box">Стандарт</p>
+            <p class="cost__price cost__price--box">3,99 usd</p>
           </th>
-          <th class="cost__tarif-item slide-cost">
-            <p class="cost__tarif-name">Анлим</p>
-            <p class="cost__price">9,99 usd</p>
+          <th class="cost__tarif-item cost__tarif-item--box cost__tarif-item--box-unlim slide-cost">
+            <p class="cost__tarif-name cost__tarif-name--box">Анлим</p>
+            <p class="cost__price cost__price--box">9,99 usd</p>
           </th>
         </tr>
         <tr class="cost__services-list">
-          <td class="cost__services-item">Розовый фильтр</td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-yes.png" width="31" height="21" alt="Розовый фильт входит в тариф База">
+          <td class="cost__services-item cost__services-item--box">Розовый фильтр</td>
+          <td class="cost__services-yes-no cost__services-yes-no--box">
+            <p class="cost__services-item cost__services-item--inside-text">Розовый фильтр</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-yes.png" width="31" height="21" alt="Розовый фильт входит в тариф База">
           </td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-yes.png" width="31" height="21" alt="Розовый фильт входит в тариф Стандарт">
+          <td class="cost__services-yes-no cost__services-yes-no--box cost__services-yes-no--mob-visually">
+            <p class="cost__services-item cost__services-item--inside-text">Розовый фильтр</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-yes.png" width="31" height="21" alt="Розовый фильт входит в тариф Стандарт">
           </td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-yes.png" width="31" height="21" alt="Розовый фильт входит в тариф Анлим">
-          </td>
-        </tr>
-        <tr class="cost__services-list">
-          <td class="cost__services-item">Смайлики</td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-no.png" width="27" height="27" alt="Смайлики не входят в тариф База">
-          </td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-yes.png" width="31" height="21" alt="Смайлики входят в тариф Стандарт">
-          </td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-yes.png" width="31" height="21" alt="Смайлики входят в тариф Анлим">
+          <td class="cost__services-yes-no cost__services-yes-no--box">
+            <p class="cost__services-item cost__services-item--inside-text">Розовый фильтр</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-yes.png" width="31" height="21" alt="Розовый фильт входит в тариф Анлим">
           </td>
         </tr>
         <tr class="cost__services-list">
-          <td class="cost__services-item">Комментарии</td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-no.png" width="27" height="27" alt="Комментарии не входят в тариф База">
+          <td class="cost__services-item cost__services-item--box">Смайлики</td>
+          <td class="cost__services-yes-no cost__services-yes-no--box">
+            <p class="cost__services-item cost__services-item--inside-text">Смайлики</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-no.png" width="27" height="27" alt="Смайлики не входят в тариф База">
           </td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-no.png" width="27" height="27" alt="Комментарии не входят в тариф Стандарт">
+          <td class="cost__services-yes-no cost__services-yes-no--box cost__services-yes-no--mob-visually">
+            <p class="cost__services-item cost__services-item--inside-text">Смайлики</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-yes.png" width="31" height="21" alt="Смайлики входят в тариф Стандарт">
           </td>
-          <td class="cost__services-yes-no">
-            <img class="cost__choice" src="img/index/cost-yes.png" width="31" height="21" alt="Комментарии входят в тариф Анлим">
+          <td class="cost__services-yes-no cost__services-yes-no--box">
+            <p class="cost__services-item cost__services-item--inside-text">Смайлики</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-yes.png" width="31" height="21" alt="Смайлики входят в тариф Анлим">
+          </td>
+        </tr>
+        <tr class="cost__services-list">
+          <td class="cost__services-item cost__services-item--box">Комментарии</td>
+          <td class="cost__services-yes-no cost__services-yes-no--box">
+            <p class="cost__services-item cost__services-item--inside-text">Комментарии</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-no.png" width="27" height="27" alt="Комментарии не входят в тариф База">
+          </td>
+          <td class="cost__services-yes-no cost__services-yes-no--box cost__services-yes-no--mob-visually">
+            <p class="cost__services-item cost__services-item--inside-text">Комментарии</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-no.png" width="27" height="27" alt="Комментарии не входят в тариф Стандарт">
+          </td>
+          <td class="cost__services-yes-no cost__services-yes-no--box">
+            <p class="cost__services-item cost__services-item--inside-text">Комментарии</p>
+            <img class="cost__choice cost__choice--box" src="img/index/cost-yes.png" width="31" height="21" alt="Комментарии входят в тариф Анлим">
           </td>
         </tr>
       </table>
-      <div class="slide-control slide-control--box cost__slider cost__slider--box">
-        <button class="slider-button cost__slider-button" type="button" aria-label="Первый слайд"></button>
-        <button class="slider-button slider-button--current cost__slider-button cost__slider-button--current" type="button" aria-label="Текущий слайд"></button>
-        <button class="slider-button cost__slider-button" type="button" aria-label="Третий слайд"></button>
+      <div class="slide-control slide-control--box cost__slider cost__slider--box cost__slider--tablet-none">
+        <button class="slider-button slider-button--box cost__slider-button" type="button" aria-label="Первый слайд"></button>
+        <button class="slider-button slider-button--box slider-button--current cost__slider-button cost__slider-button--current" type="button" aria-label="Текущий слайд"></button>
+        <button class="slider-button slider-button--box cost__slider-button" type="button" aria-label="Третий слайд"></button>
       </div>
     </div>
     <div class="contacts">
