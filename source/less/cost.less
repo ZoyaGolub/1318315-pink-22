@@ -1,16 +1,29 @@
 // Cost
 
 .cost--box {
-  width: 100%;
   background-color: @grey;
+
+  @media (max-width: @mobail-width-only) {
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 .cost__table--box {
   padding-top: 100px;
   padding-bottom: 45px;
 
+  @media (max-width: @mobail-width-only) {
+    width: 1104px;
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    left: -529px;
+  }
+
   @media (min-width: @tablet-width) {
       padding-bottom: 70px;
+      margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,17 +32,9 @@
   }
 }
 
-.cost__tarif-item--dislpay-none {
-  @media (max-width: @mobail-width-only) {
-    display: none;
-  }
-}
-
 .cost__tarif-item--box {
   background-color: @black-blue;
   border: 2px solid @black-blue;
-  border-radius: 1px 0 0 0;
-  width: 98%; /*276px;*/
   height: 90px;
 
   @media (min-width: @tablet-width) {
@@ -43,10 +48,8 @@
   }
 }
 
-.cost__tarif-item--mob-visually {
-  @media (max-width: @mobail-width-only) {
-    display: table-cell;
-  }
+.cost__tarif-item--box-base {
+  border-radius: 1px 0 0 0;
 }
 
 .cost__tarif-item--box-unlim {
@@ -67,6 +70,10 @@
 
 .cost__tarif-name--box {
   margin-bottom: 0;
+
+  @media (max-width: @mobail-width-only) {
+    margin-top: 19px;
+  }
 }
 
 .cost__price {
@@ -83,22 +90,26 @@
 
 .cost__price--box {
   margin-top: 0;
-}
 
-.cost__tarif-item--box-base {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: table-cell;
+  @media (max-width: @mobail-width-only) {
+    margin-bottom: 35px;
   }
 }
 
-.cost__tarif-item--box-unlim {
-  display: none;
+.cost__services-item--angle-top-left {
+  border-radius: 1px 0 0 0;
+}
 
-  @media (min-width: @tablet-width) {
-    display: table-cell;
-  }
+.cost__services-item--angle-top-right {
+  border-radius: 0 1px 0 0;
+}
+
+.cost__services-item--angle-bottom-right {
+  border-radius: 0 0 1px 0;
+}
+
+.cost__services-item--angle-bottom-left {
+  border-radius: 0 0 0 1px;
 }
 
 .cost__services-item {
@@ -114,6 +125,8 @@
 
 .cost__services-item--inside-text {
   text-transform: uppercase;
+  margin: 0 auto 0 0;
+  width: max-content;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -121,33 +134,32 @@
 }
 
 .cost__services-item--box {
-  display: none;
-  width: 25%; /*153px;*/
   background-color: @white;
 
   @media (min-width: @tablet-width) {
-    display: table-cell;
     padding: 17px 15px;
   }
 }
 
 .cost__services-yes-no--box {
-  display: none;
-  width: 25%;
   background-color: @white;
 
-  @media (min-width: @tablet-width) {
-    display: table-cell;
-  }
-}
-
-.cost__services-yes-no--mob-visually {
   @media (max-width: @mobail-width-only) {
     display: table-cell;
+    height: 59px;
+    padding: 0 20px;
+    position: relative;
   }
 }
 
+
 .cost__choice--box {
+  @media (max-width: @mobail-width-only) {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 10% 40%;
   }
