@@ -87,3 +87,27 @@
   line-height: 33px;
   text-align: center;
 }
+
+.contacts__map {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+    margin-top: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+    margin-top: 25px;
+  }
+}
+
+.contacts__map-online {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
