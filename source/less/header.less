@@ -1,14 +1,30 @@
 // Header
 
-.header__logo--box {
-  display: flex;
-  justify-content: space-between;
+.header__menu--box {
+  width: 100%;
   background-color: @black-blue;
-  padding: 23px 20px;
-  box-shadow: 0 1px 0 @black;
 
   @media (min-width: @desktop-width) {
+    width: auto;
     background-color: inherit;
+  }
+}
+
+.header__logo--box {
+  display: flex;
+  /*justify-content: space-between;*/ /*Именно это вызывает скрол по горизонтили, это кнопка хакрытия меню*/
+  padding: 23px 20px;
+  margin: 0 auto;
+  box-shadow: 0 1px 0 @black;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 20px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 0 40px 0;
+    margin: 0 30px 0 0;
+    width: 100px;
   }
 }
 
@@ -20,8 +36,7 @@
   }
 
   .header__navigation--box {
-    max-width: 940px;
-    margin: 0 auto;
+    margin: 0 130px;
   }
 
   .header__navigation {
@@ -30,3 +45,4 @@
     justify-content: space-between;
   }
 }
+

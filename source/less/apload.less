@@ -79,8 +79,12 @@
 }
 
 .apload__buttons--box {
-  width: 320px;
+  width: 280px;
   padding: 30px 10px;
+
+  @media (min-width: @tablet-width) {
+    width: 275px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 500px;
@@ -129,3 +133,4 @@
   opacity: 0.1;
   border: 3px solid @black-blue;
 }
+
