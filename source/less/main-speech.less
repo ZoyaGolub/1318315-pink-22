@@ -20,7 +20,22 @@
   }
 }
 
-.main-speech__header--box {
+.main-speech__header--box-contest {
+  width: 85%;
+  margin: 0 auto 0;
+  padding: 35px 0 50px;
+
+  @media (min-width: @tablet-width) {
+    padding: 80px 0 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    padding: 75px 0 105px;
+  }
+}
+
+.main-speech__header--box-photos {
   width: 85%;
   margin: 0 auto 0;
   padding: 35px 0 50px;
@@ -56,17 +71,32 @@
   }
 }
 
-.main-speech__offer--box {
+.main-speech__offer--box-contest {
   margin: 70px auto 30px;
   width: 85%;
 
-  @media (min-width: @tablet-width) /*and (max-width: @tablet-width-only)*/ {
+  @media (min-width: @tablet-width) {
     margin-bottom: 70px;
     width: 80%;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 70px;
+    width: 60%;
+  }
+}
+
+.main-speech__offer--box-photos {
+  margin: 54px auto 60px;
+  width: 85%;
+
+  @media (min-width: @tablet-width) {
+    margin: 100px 40px 85px;
+    width: 80%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 100px auto;
     width: 60%;
   }
 }

@@ -1,7 +1,15 @@
 // Apload
 
 .apload__caption--box {
-  padding: 20px 0 40px;
+  margin: 20px 20px 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 30px 20px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 30px 130px 70px;
+  }
 }
 
 .apload__speech {
@@ -17,7 +25,7 @@
 }
 
 .apload__speech--box {
-  width: 90%;
+  /*width: 90%;*/
 }
 
 .apload__user-content {

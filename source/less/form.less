@@ -240,6 +240,15 @@
   }
 }
 
+.form__contacts-input {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form__text--position { /*Не получается зафиксировать расположение иконки внутри инпута, при переполнении смещается*/
+  position: relative;
+}
+
 .form__img {
   display: flex;
   justify-content: center;
@@ -259,36 +268,9 @@
   }
 }
 
-.form__img--phone {
+.form__img--position {
   position: absolute;
-  top: 1921px;
-  right: 31px;
-
-  @media (min-width: @tablet-width) {
-    top: 1648px;
-    right: 86px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 1086px;
-    right: 639px;
-  }
-}
-
-.form__img--email {
-  position: absolute;
-  top: 2052px;
-  right: 31px;
-
-  @media (min-width: @tablet-width) {
-    top: 1779px;
-    right: 86px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 1086px;
-    right: 195px;
-  }
+  margin: 14px 2px 0 0;
 }
 
 .form__icon {
