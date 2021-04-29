@@ -2,18 +2,21 @@
 
 .range {
   width: 240px;
+  margin: 10px auto;
   display: flex;
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     align-items: center;
-    width: 253px;
+    width: auto;
     height: min-content;
+    margin: 20px 20px 27px 15px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 380px;
+    width: 410px;
     height: min-content;
+    margin: 7px 40px 27px 55px;
   }
 }
 
@@ -76,6 +79,16 @@
   color: @black-blue;
   width: 240px;
   height: 2px;
+  margin-top: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    margin: 36px 0 34px 20px;
+  }
 }
 
 .range__toggle-crop {

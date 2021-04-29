@@ -24,10 +24,6 @@
   }
 }
 
-.apload__speech--box {
-  /*width: 90%;*/
-}
-
 .apload__user-content {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -35,7 +31,6 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr min-content;
-    column-gap: 20px;
   }
 }
 
@@ -43,6 +38,12 @@
   background-color: @grey;
   width: 100%;
   height: min-content;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin: 0 130px 30px;
+    padding: 37px 60px;
+  }
 }
 
 .apload__user-photo {
@@ -84,18 +85,24 @@
 .apload__buttons {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .apload__buttons--box {
   width: 280px;
-  padding: 30px 10px;
+  padding: 30px 20px 40px;
 
   @media (min-width: @tablet-width) {
     width: 275px;
+    padding: 0 20px 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 500px;
+    width: 410px;
+    margin-left: 50px;
   }
 }
 
@@ -116,11 +123,11 @@
 }
 
 .apload__button--box {
-  width: 240px;
+  width: 280px;
   height: 55px;
   border-radius: 30px;
   box-sizing: border-box;
-  margin-top: 10px;
+  margin: 10px auto 0;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     width: 260px;
@@ -129,7 +136,7 @@
 
   @media (min-width: @desktop-width) {
     width: 183px;
-    margin-right: 50px;
+    margin: 0;
   }
 }
 
@@ -141,4 +148,3 @@
   opacity: 0.1;
   border: 3px solid @black-blue;
 }
-
