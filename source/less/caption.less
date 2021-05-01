@@ -1,89 +1,97 @@
 // Caption
 
-@media (min-width: @tablet-width) {
-  .caption {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content;
-  }
-
-  .caption__slogan {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .caption__links {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .caption__img {
-    grid-column-start: -1;
-    grid-column-end: -2;
-    grid-row-start: 1;
-    grid-row-end: -1;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .caption {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content min-content;
-  }
-
-  .caption__slogan {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .caption__links {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-
-  .caption__img {
-    grid-column-start: 2;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: -1;
-  }
-}
-
 .caption--box {
   width: 100%;
   height: 462px;
   background-color: @grey-dark;
   background-image: url("../img/index/house-background.jpg") no-repeat center;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    height: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 645px;
+  }
 }
 
 .caption__slogan {
   color: @white;
   font-weight: 300;
   font-size: 24px;
+  line-height: 120%;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .caption__slogan--box {
+  width: 69%;
   padding: 50px 20px 40px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    padding: 102px 0 40px 60px;
+    width: 230px;
+  }
 }
 
 .caption__img {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding-top: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 98px;
+    padding-left: 150px;
+  }
 }
 
 .caption__img-hand-phone {
   width: 320px;
   height: 286px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 660px;
+    height: 545px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1050px;
+    height: 645px;
+  }
 }
 
 .caption__img-phone-screen {
   width: 111px;
   height: 197px;
   position: absolute;
-  padding: 32px 104px;
+  padding: 32px 0 0 104px;
+
+  @media (min-width: @tablet-width) {
+    width: 195px;
+    height: 346px;
+    padding: 54px 0 0 371px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 230px;
+    height: 408px;
+    padding: 65px 0 0 570px;
+  }
 }
 
 .caption__links {
@@ -99,7 +107,15 @@
   height: 271px;
 
   @media (min-width: @tablet-width) {
-    background-color: inherit;
+    position: absolute;
+    top: 230px;
+    width: 300px;
+    padding-left: 20px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
   }
 }
 
@@ -126,6 +142,15 @@
   width: 205px;
   height: 56px;
   margin: 40px auto 25px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 46px auto 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 67px auto 58px;
+  }
 }
 
 .caption__links-icon-item {
