@@ -60,15 +60,15 @@
         <ul class="form__human-name form__human-name-list">
           <li class="form__human-name-item form__human-name-surname">
             <label class="form__name form__name--box" for="form__surname">Фамилия</label>
-            <input class="form__text form__text--box" id="form__surname" type="text" name="name" form="contest" placeholder="Укажите фамилию *" required>
+            <input class="form__text form__text--box form__surname" id="form__surname" type="text" name="name" form="contest" placeholder="Укажите фамилию *" required>
           </li>
           <li class="form__human-name-item form__human-name-name">
             <label class="form__name form__name--box" for="form__name">Имя</label>
-            <input class="form__text form__text--box" id="form__name" type="text" name="name" form="contest"  placeholder="Введите ваше имя *" required>
+            <input class="form__text form__text--box form__name" id="form__name" type="text" name="name" form="contest"  placeholder="Введите ваше имя *" required>
           </li>
           <li class="form__human-name-item form__human-name-patronymic">
             <label class="form__name form__name--box" for="form__patronymic">Отчество</label>
-            <input class="form__text form__text--box" id="form__patronymic" type="text" name="name" form="contest" placeholder="Ну и отчество тоже">
+            <input class="form__text form__text--box form__patronymic" id="form__patronymic" type="text" name="name" form="contest" placeholder="Ну и отчество тоже">
           </li>
         </ul>
         <div class="form__os form__os--box">
@@ -116,7 +116,7 @@
             <li class="form__contacts-answer-item">
               <label class="form__name form__name--box" for="form__email">Адрес почты</label>
               <div class="form__contacts-input">
-                <input class="form__text form__text--box form__text--position" id="form__email" type="email" name="email" form="contest" placeholder="Введите почту *" required>
+                <input class="form__text form__text--box form__text--position form__email" id="form__email" type="email" name="email" form="contest" placeholder="Введите почту *" required>
                 <div class="form__img form__img--box form__img--position">
                   <svg class="form__icon form__icon--email" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.9101 1.68071C16.1101 0.752143 15.8201 0 14.2601 0H3.73007C2.17007 0 1.88007 0.761428 3.07007 1.68071L6.82007 4.57786C7.44102 5.02891 8.2067 5.27397 8.99507 5.27397C9.78344 5.27397 10.5491 5.02891 11.1701 4.57786L14.9101 1.68071Z" fill="#D22856"/>
@@ -183,23 +183,23 @@
         </fieldset>
       </div>
       <div class="form__button form__button--box container">
-        <button class="form__button-send form__button-send--box" type="submit" aria-label="Отправка заполненой формы на конкурс">Отправить форму</button>
+        <button class="form__button-send form__button-send--box form__button-send--popup" type="submit" aria-label="Отправка заполненой формы на конкурс">Отправить форму</button>
         <p class="form__footnote form__footnote--box"><span class="form__footnote-star">*</span> - Обязательные поля</p>
       </div>
     </form>
   </main>
-  <div class="popup popup-error popup--box">
+  <div class="popup popup-error popup--box popup-open popup--error">
     <h2 class="popup__caption popup__caption--box">Что-то пошло не так!</h2>
     <p class="popup__text popup__text--box popup-error__text popup-error__text--box">Проверьте поля, выделенные красным, скорее всего&nbsp;вы&nbsp;забыли их заполнить</p>
     <div class="popup-error__button popup-error__button--box">
-      <button class="popup__button popup__button--box" type="reset" aria-label="Закрытие окна и возврат на страницу">Ок</button>
+      <button class="popup__button popup__button--box popup__close" type="reset" aria-label="Закрытие окна и возврат на страницу">Ок</button>
     </div>
   </div>
-  <div class="popup popup-succes popup--box">
+  <div class="popup popup-succes popup--box popup-open popup--succes ">
     <h2 class="popup__caption popup__caption--box">Ваша заявка отправлена</h2>
     <p class="popup__text popup__text--box popup-succes__text popup-succes__text--box">Спасибо за ваше участие, ваша заявка уже поступила&nbsp;к&nbsp;нам. В ближайшее время&nbsp;мы рассмотрим ее и оповестим&nbsp;вас.</p>
     <div class="popup-succes__button popup-succes__button--box">
-      <button class="popup__button popup__button--box" type="button" aria-label="Закрытие окна и возврат на страницу">Закрыть окно</button>
+      <button class="popup__button popup__button--box popup__close" type="button" aria-label="Закрытие окна и возврат на страницу">Закрыть окно</button>
     </div>
   </div>
   <footer class="footer container">

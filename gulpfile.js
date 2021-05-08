@@ -10,7 +10,7 @@ const imagemin = require("gulp-imagemin");
 const rename = require("gulp-rename");
 const webp = require("gulp-webp");
 const htmlmin = require("gulp-htmlmin");
-const terser = require("terser");
+const minify = require("terser");
 const svgstore = require("svgstore");
 const clean = require("gulp-clean");
 
@@ -38,7 +38,7 @@ exports.styles = styles;
 const server = (done) => { /**В демке по-другому прописан сервер 1:52:13*/
   sync.init({
     server: {
-      baseDir: 'build' /*я переключаю source или build*/
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -55,15 +55,15 @@ const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/javascript.js", gulp.series(jsmin));
   gulp.watch("source/*.html").on("change", sync.reload);
-  /*gulp.watch("source/*.html", gulp.series(htmlmin, reload));*/
+  /*В демке по-другому html отслеживается: gulp.watch("source/*.html", gulp.series(htmlmin, reload));*/
 }
 
 exports.watcher = watcher;
 
 //Images
 
-const copyimg = () => { /*при запуске команды билд не копирует папки  contest,icon,logo-sprite, переносит только favicon,index,photos*/
-  return gulp.src("source/img/**/*.*") /*{jpg,png,svg}")*/
+const copyimg = () => {
+  return gulp.src("source/img/**/*.*")
     .pipe(gulp.dest("build/img"))
 }
 exports.copyimg = copyimg;
@@ -98,21 +98,21 @@ const minhtml = () => {
 
 exports.minhtml = minhtml;
 
-//JavaScripts
+//JavaScript
 
-const jsmin = () => {
-  return gulp.src("source/js/*.js")
-    .pipe(tereser())
-    .pipe(rename("javascripts.min.css"))
+const minify = () => { /*Выдает ошибку*/
+  return gulp.src("source/js/javascript.js")
+    .pipe(terser())
+    .pipe(rename("javascript.min.css"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream())
 }
 
-exports.jsmin =jsmin;
+exports.minify = minify;
 
 //Sprite
 
-const sprite = () => {  /*Выдает ошибку*/
+const sprite = () => { /*Выдает ошибку*/
   return gulp.src("source/img/logo-icon/logo-sprite/*.svg")
     .pipe(svgstore({inLineSvg: true}))
     .pipe(rename("sprite.svg"))
@@ -151,17 +151,14 @@ exports.default = gulp.series(
     copy,
     minhtml,
     styles,
+    minify,
     createwebp
   ),
   gulp.series(
     server,
     watcher
   )
-); /*jsmin, sprite,*/
-
-/*exports.default = gulp.series(
-  styles, server, watcher
-);*/
+); /*sprite,*/
 
 const build = gulp.series(
   cleanbuild,
@@ -170,13 +167,13 @@ const build = gulp.series(
     copy,
     minhtml,
     styles,
+    minify,
     createwebp
   ),
   gulp.series(
     server,
     watcher
   )
-); /*jsmin, sprite,*/
-/*при запуске команды билд не копирует папки contest,icon,logo-sprite, переносит только favicon,index,photos*/
+); /*sprite,*/
 
 exports.build = build;
