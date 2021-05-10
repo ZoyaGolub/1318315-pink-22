@@ -10,8 +10,8 @@ const imagemin = require("gulp-imagemin");
 const rename = require("gulp-rename");
 const webp = require("gulp-webp");
 const htmlmin = require("gulp-htmlmin");
-const minify = require("terser");
-const svgstore = require("svgstore");
+const minify = require("gulp-minify");
+//const svgstore = require("svgstore");
 const clean = require("gulp-clean");
 
 // Styles
@@ -53,7 +53,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/javascript.js", gulp.series(jsmin));
+  gulp.watch("source/js/javascript.js", gulp.series(minjs));
   gulp.watch("source/*.html").on("change", sync.reload);
   /*В демке по-другому html отслеживается: gulp.watch("source/*.html", gulp.series(htmlmin, reload));*/
 }
@@ -100,19 +100,19 @@ exports.minhtml = minhtml;
 
 //JavaScript
 
-const minify = () => { /*Выдает ошибку*/
-  return gulp.src("source/js/javascript.js")
-    .pipe(terser())
-    .pipe(rename("javascript.min.css"))
+const minjs = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(minify())
+    .pipe(rename("*.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream())
 }
 
-exports.minify = minify;
+exports.minjs = minjs;
 
 //Sprite
-
-const sprite = () => { /*Выдает ошибку*/
+/*Выдает ошибку*/ /*
+const sprite = () => {  /*
   return gulp.src("source/img/logo-icon/logo-sprite/*.svg")
     .pipe(svgstore({inLineSvg: true}))
     .pipe(rename("sprite.svg"))
@@ -120,7 +120,7 @@ const sprite = () => { /*Выдает ошибку*/
 }
 
 exports.sprite = sprite;
-
+*/
 //Copy
 
 const copy = (done) => {
@@ -151,7 +151,7 @@ exports.default = gulp.series(
     copy,
     minhtml,
     styles,
-    minify,
+    minjs,
     createwebp
   ),
   gulp.series(
@@ -167,7 +167,7 @@ const build = gulp.series(
     copy,
     minhtml,
     styles,
-    minify,
+    minjs,
     createwebp
   ),
   gulp.series(

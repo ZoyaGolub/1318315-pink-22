@@ -1,21 +1,24 @@
 // Header
 
-.header__menu--box {
+.header__menu--close {
   width: 100%;
-  background-color: @black-blue;
+  background-color: @black;
+  opacity: 0.3;
+}
 
-  @media (min-width: @desktop-width) {
-    width: auto;
-    background-color: inherit;
+.header__menu--box/*open*/ {
+  @media (max-width: @tablet-width-only) {
+    width: 100%;
+    background-color: @black-blue;
+    box-shadow: 0 1px 0 @black, inset 0 1px 0 @grey-shadow;
   }
 }
 
 .header__logo--box {
   display: flex;
-  /*justify-content: space-between;*/ /*Именно это вызывает скрол по горизонтили, это кнопка хакрытия меню*/
+  justify-content: space-between; /*Именно это вызывает скрол по горизонтили, это кнопка хакрытия меню*/
   padding: 23px 20px;
   margin: 0 auto;
-  box-shadow: 0 1px 0 @black;
 
   @media (min-width: @tablet-width) {
     padding: 25px 20px 40px;
@@ -35,13 +38,13 @@
     width: 100%;
   }
 
-  .header__navigation--box {
-    margin: 0 130px;
-  }
-
   .header__navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .header__navigation--box {
+    margin: 0 130px;
   }
 }
