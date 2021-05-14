@@ -55,6 +55,24 @@
   @media (min-width: @desktop-width) {
     padding-top: 20px;
   }
+
+  &:visited {
+    color: @white;
+    border-bottom: 2px solid @wite;
+  }
+
+  &:focus {
+    color: @red;
+  }
+
+  &:hover {
+    color: @red;
+  }
+
+  &:active {
+    color: @white;
+    opacity: 0.3;
+  }
 }
 
 .site-navigation__toggle {
@@ -64,6 +82,19 @@
   height: 23px;
   border: none;
   cursor: pointer;
+
+  &:focus {
+    fill: @red;
+  }
+
+  &:hover {
+    fill: @red;
+  }
+
+  &:active {
+    fill: @red;
+    fill-opacity: 0.3;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -77,6 +108,19 @@
   height: 23px;
   border: none;
   cursor: pointer;
+
+  &:focus {
+    fill: @red;
+  }
+
+  &:hover {
+    fill: @red;
+  }
+
+  &:active {
+    fill: @red;
+    fill-opacity: 0.3;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;

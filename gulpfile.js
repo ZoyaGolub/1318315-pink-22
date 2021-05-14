@@ -54,8 +54,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/javascript.js", gulp.series(minjs));
-  gulp.watch("source/*.html").on("change", sync.reload);
-  /*В демке по-другому html отслеживается: gulp.watch("source/*.html", gulp.series(htmlmin, reload));*/
+  gulp.watch("source/*.html", gulp.series(htmlmin, sync.reload));
 }
 
 exports.watcher = watcher;
@@ -101,9 +100,9 @@ exports.minhtml = minhtml;
 //JavaScript
 
 const minjs = () => {
-  return gulp.src("source/js/*.js")
+  return gulp.src("source/js/scripts.js")
     .pipe(minify())
-    .pipe(rename("*.min.js"))
+    .pipe(rename("scripts.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream())
 }

@@ -1,11 +1,36 @@
 // Cost
 
-.cost--box {
-  background-color: @grey;
-
+.cost {
   @media (max-width: @mobail-width-only) {
     width: 100%;
     overflow: hidden;
+  }
+}
+
+.cost--box {
+  background-image: url("../img/index/grey-background-small_mob.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/grey-background-small_mob@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/index/grey-background-small_tab.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/grey-background-small_tab@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/index/grey-background-small_desk.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/grey-background-small_desk@2x.png");
+    }
   }
 }
 
@@ -64,12 +89,22 @@
   position: absolute;
   top: -2px;
   left: -2px;
+
+  @media (max-width: @tablet-width-only) {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .cost__hit {
   position: absolute;
   top: 14px;
   left: 13px;
+
+  @media (max-width: @tablet-width-only) {
+    top: 12px;
+    left: 7px;
+  }
 }
 
 .cost__tarif-name {
@@ -181,8 +216,12 @@
   }
 }
 
-.cost__slider--box {
+.cost__slider {
   padding-bottom: 49px;
+}
+
+.cost__slider--box {
+  background-color: @grey;
 }
 
 .cost__slider--tablet-none {

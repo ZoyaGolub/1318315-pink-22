@@ -37,8 +37,17 @@
   }
 }
 
-.reviews--box {
+.reviews {
   padding-top: 32px;
+}
+
+.reviews--box {
+  background-image: url("../img/index/white-background_mob.png");
+  background-position-y: -15px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/white-background_mob@2x.png");
+  }
 }
 
 .reviews__quotes {
@@ -50,6 +59,21 @@
 }
 
 .reviews__arrow-slider-button {
+  fill: @black-blue;
+  fill-opacity: 0.3;
+
+  &:focus {
+    fill-opacity: 0.6;
+  }
+
+  &:hover {
+    fill-opacity: 0.6;
+  }
+
+  &:active {
+    fill-opacity: 0.1;
+  }
+
   @media (max-width: @tablet-width-only) {
     display: none;
   }

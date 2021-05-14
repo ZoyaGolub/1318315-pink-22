@@ -1,18 +1,41 @@
 // Caption
+.caption {
+  display: flex;
+  flex-direction: column;
+}
 
 .caption--box {
   width: 100%;
   height: 462px;
   background-color: @grey-dark;
-  background-image: url("../img/index/house-background.jpg") no-repeat center;
-  position: relative;
+  background-image: url("../img/index/house-background_mob.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -9px;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/house-background_mob@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     height: 620px;
+    background-image: url("../img/index/house-background_tab.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/house-background_tab@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     height: 745px;
+    background-image: url("../img/index/house-background_desk.jpg");
+    position: absolute;
+    top: 0;
+    padding-top: 100px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/house-background_desk@2x.jpg");
+    }
   }
 }
 
@@ -40,9 +63,10 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    padding: 102px 0 40px 40px;
+    padding: 83px 0 40px 40px;
     width: 230px;
     margin: 0 0 0 20px;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
@@ -105,24 +129,30 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
+  @media (max-width: @mobail-width-only) {
+    order: 2;
+  }
 }
 
 .caption__links--box {
   background-color: @black-blue;
   width: 100%;
   height: 271px;
+  padding-top: 28px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 230px;
+    top: 590px;
     width: 300px;
     padding-left: 20px;
     background-color: transparent;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 130px;
-    top: 400px;
+    top: 452px;
   }
 }
 
@@ -139,6 +169,22 @@
   box-sizing: border-box;
   border-radius: 29px;
   padding: 15px 43px;
+
+  &:focus {
+    color: @red;
+    background-color: @white;
+    box-shadow: 0px 5px 7px @black-shadow;
+  }
+
+  &:hover {
+    color: @red;
+    background-color: @white;
+    box-shadow: 0px 5px 7px @black-shadow;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .caption__links-icon-list {
@@ -179,4 +225,8 @@
 .caption__links-description--box {
   margin: 5px auto;
   width: 270px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
 }
