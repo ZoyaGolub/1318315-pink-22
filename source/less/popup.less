@@ -1,5 +1,9 @@
 // Popup
 
+.popup {
+  display: none;
+}
+
 .popup--box {
   background: @white;
   box-shadow: 0 7px 15px @grey-shadow;
@@ -10,6 +14,9 @@
 .popup-error {
   width: 100%;
   height: 280px;
+  position: fixed;
+  top: 10%;
+  left: 25%;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     width: 460px;
@@ -25,6 +32,9 @@
 .popup-succes {
   width: 100%;
   height: 380px;
+  position: fixed;
+  top: 50%;
+  left: 25%;
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     width: 460px;
@@ -95,6 +105,7 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .popup__button--box {
@@ -104,6 +115,7 @@
   border: 2px solid @green;
   border-radius: 1px;
   margin: 51px 5%;
+  cursor: pointer;
 }
 
 .popup-error__button--box {

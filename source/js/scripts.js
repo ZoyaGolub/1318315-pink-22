@@ -8,10 +8,12 @@ const popupSurname = document.querySelector(".form__surname");
 const popupName = document.querySelector(".form__name");
 const popupPatronymic = document.querySelector(".form__patronymic");
 const popupEmail = document.querySelector(".form__email");
-const headerBurger = document.querySelector(".site-navigation__toggle");
+/*const headerBurger = document.querySelector(".site-navigation__toggle");
 const headerClose = document.querySelector(".site-navigation__toggle-close")
 const headerNav = document.querySelector(".site-navigation");
-const headerBkg = document.querySelector(".header__menu--box");
+const headerBkg = document.querySelector(".header__menu--box");*/
+
+console.log(headerClose)
 
 let isStorageSupport = true;
 let storage = "";
@@ -85,7 +87,7 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
+/*
 headerClose.addEventListener("click", function () {
   evt.preventDefault();
   headerClose.classList.remove("site-navigation__toggle-close");
@@ -105,3 +107,4 @@ headerBurger.addEventListener("click", function () {
   headerBkg.classList.remove("header__menu--close");
   headerBkg.classList.add("header__menu--box");
 });
+*/
