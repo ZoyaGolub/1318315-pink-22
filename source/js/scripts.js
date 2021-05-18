@@ -1,6 +1,6 @@
 const popupRequest = document.querySelector(".form__button-send--popup");
 const popupOpen = document.querySelector(".popup-open");
-const popupClose = document.querySelector(".popup__close");
+const popupClose = document.querySelector(".popup__button");
 const popupError = document.querySelector(".popup--error");
 const popupSucces = document.querySelector(".popup--succes");
 const popupForm = document.querySelector(".form");
@@ -13,7 +13,7 @@ const headerClose = document.querySelector(".site-navigation__toggle-close")
 const headerNav = document.querySelector(".site-navigation");
 const headerBkg = document.querySelector(".header__menu--box");*/
 
-console.log(headerClose)
+/*console.log(headerClose)*/
 
 let isStorageSupport = true;
 let storage = "";
@@ -27,8 +27,8 @@ try {
 };
 
 popupRequest.addEventListener("click", function () {
-  evt.preventDefault();
-  popupOpen.classList.add("popup-show");
+  //evt.preventDefault();
+  popupError.classList.add("popup-show");
 
   if (storage) {
     popupSurname.value = storage;
@@ -49,24 +49,31 @@ popupRequest.addEventListener("click", function () {
     }
   }
 
+  //popupSucces.classList.add("popup-show");
   popupSurname.focus();
 });
 
 popupClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popupOpen.classList.remove("popup-show");
+  popupSucces.classList.remove("popup-show");
+});
+
+popupClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popupError.classList.remove("popup-show");
 });
 
 popupForm.addEventListener("submit", function (evt) {
   if (!popupSurname.value || !popupName.value || !popupEmail.value) {
     evt.preventDefault();
     popupSucces.classList.add("popup-show");
+    popupError.classList.remove("popup-show");
   } else {
     evt.preventDefault();
     popupError.classList.add("popup-show");
-    localStorage.setItem("surname", popupSurname.value);
+    /*localStorage.setItem("surname", popupSurname.value);
     localStorage.setItem("name", popupName.value);
-    localStorage.setItem("email", popupEmail.value);
+    localStorage.setItem("email", popupEmail.value);*/
   }
 });
 

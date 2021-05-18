@@ -42,11 +42,14 @@
 }
 
 .reviews--box {
-  background-image: url("../img/index/white-background_mob.png");
-  background-position-y: -15px;
+  @media (max-width: @mobail-width-only) {
+    background-image: url("../img/index/white-background_mob.png");
+    position: relative;
+    top: -36px;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/index/white-background_mob@2x.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/white-background_mob@2x.png");
+    }
   }
 }
 

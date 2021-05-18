@@ -80,6 +80,7 @@
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -108,6 +109,15 @@
   }
 }
 
+.info__effects-list--box {
+  @media (min-width: @desktop-width) {
+    background-color: @grey;
+    position: relative;
+    z-index: 2;
+    top: -80px;
+  }
+}
+
 .info__effects-item {
   list-style: none;
   margin-top: 43px;
@@ -116,6 +126,8 @@
 .info__effects-item--box {
   width: 100%;
   background-color: @grey;
+
+
 }
 
 .info__effects-caption {
@@ -127,6 +139,7 @@
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     text-align: left;
+    margin-bottom: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -228,6 +241,19 @@
   @media (min-width: @desktop-width) {
     width: 165px;
     height: 294px;
+  }
+}
+
+.info__effects-img-shadow {
+  display: none;
+  background: linear-gradient(90deg, @photo-shadow 0%, @black 49.8%, @photo-shadow 93.23%);
+  opacity: 0.3;
+  filter: blur(4px);
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    margin-top: 230px;
   }
 }
 

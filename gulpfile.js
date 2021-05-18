@@ -53,8 +53,8 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/javascript.js", gulp.series(minjs));
-  gulp.watch("source/*.html", gulp.series(htmlmin), sync.reload);
+  gulp.watch("source/js/javascript.js", gulp.series(minjs), sync.stream());
+  gulp.watch("source/*.html", gulp.series(htmlmin), sync.stream());
 }
 
 exports.watcher = watcher;
@@ -93,6 +93,7 @@ const minhtml = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
+    .pipe(sync.stream())
 }
 
 exports.minhtml = minhtml;
@@ -120,6 +121,7 @@ const sprite = () => {  /*
 
 exports.sprite = sprite;
 */
+
 //Copy
 
 const copy = (done) => {
