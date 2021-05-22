@@ -1,8 +1,8 @@
 const popupRequest = document.querySelector(".form__button-send--popup");
-const popupOpen = document.querySelector(".popup-open");
-const popupClose = document.querySelector(".popup__button");
 const popupError = document.querySelector(".popup--error");
 const popupSucces = document.querySelector(".popup--succes");
+const popupEclose = document.querySelector(".popup-error__button");
+const popupSclose = document.querySelector(".popup-succes__button");
 const popupForm = document.querySelector(".form");
 const popupSurname = document.querySelector(".form__surname");
 const popupName = document.querySelector(".form__name");
@@ -53,12 +53,12 @@ popupRequest.addEventListener("click", function () {
   popupSurname.focus();
 });
 
-popupClose.addEventListener("click", function (evt) {
+popupSclose.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupSucces.classList.remove("popup-show");
 });
 
-popupClose.addEventListener("click", function (evt) {
+popupEclose.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupError.classList.remove("popup-show");
 });
