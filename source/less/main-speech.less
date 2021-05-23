@@ -1,10 +1,34 @@
-// main-speech
+// Main-speech
 
 .main-speech--box {
   width: 100%;
-  height: 462px;
   background-color: @grey-dark;
-  background-image: url("../img/index/house-background.jpg") no-repeat center;
+  background-image: url("../img/index/house-background_mob.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -9px;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/house-background_mob@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/index/house-background_tab.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/house-background_tab@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/index/house-background_desk.jpg");
+    position: absolute;
+    top: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/house-background_desk@2x.jpg");
+    }
+  }
 }
 
 .main-speech__header {
@@ -20,9 +44,34 @@
   }
 }
 
-.main-speech__header--box {
+.main-speech__header--box-contest {
   width: 85%;
-  margin: 0 auto;
+  margin: 0 auto 0;
+  padding: 35px 0 50px;
+
+  @media (min-width: @tablet-width) {
+    padding: 80px 0 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 65%;
+    padding: 160px 0 105px;
+  }
+}
+
+.main-speech__header--box-photos {
+  width: 85%;
+  margin: 0 auto 0;
+  padding: 35px 0 50px;
+
+  @media (min-width: @tablet-width) {
+    padding: 80px 0 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    padding: 140px 0 105px;
+  }
 }
 
 .main-speech__offer {
@@ -39,24 +88,40 @@
 
 .main-speech__fill {
   color: @white;
-  /*font-weight: inherit; /*normal;*/
-  /*font-size:inherit; /*14px;*/
-  /*line-height: inherit; /*30px;*/
-  /*text-align: inherit; /*center;*/
+  font-size: 1px;
 
   @media (min-width: @tablet-width) {
     color: @black-blue;
+    font-size: 18px;
   }
 }
 
-.main-speech__offer--box {
-  margin: 70px auto;
+.main-speech__offer--box-contest {
+  margin: 70px auto 30px;
+  width: 85%;
 
-  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
-    width: 90%;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+    width: 80%;
   }
 
   @media (min-width: @desktop-width) {
-    width: 65%;
+    margin-top: 400px;
+    width: 60%;
+  }
+}
+
+.main-speech__offer--box-photos {
+  margin: 54px auto 60px;
+  width: 85%;
+
+  @media (min-width: @tablet-width) {
+    margin: 100px 40px 85px;
+    width: 80%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 380px auto 100px;
+    width: 60%;
   }
 }
