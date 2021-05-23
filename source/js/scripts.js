@@ -8,12 +8,6 @@ const popupSurname = document.querySelector(".form__surname");
 const popupName = document.querySelector(".form__name");
 const popupPatronymic = document.querySelector(".form__patronymic");
 const popupEmail = document.querySelector(".form__email");
-/*const headerBurger = document.querySelector(".site-navigation__toggle");
-const headerClose = document.querySelector(".site-navigation__toggle-close")
-const headerNav = document.querySelector(".site-navigation");
-const headerBkg = document.querySelector(".header__menu--box");*/
-
-/*console.log(headerClose)*/
 
 let isStorageSupport = true;
 let storage = "";
@@ -27,7 +21,6 @@ try {
 };
 
 popupRequest.addEventListener("click", function () {
-  //evt.preventDefault();
   popupError.classList.add("popup-show");
 
   if (storage) {
@@ -49,7 +42,6 @@ popupRequest.addEventListener("click", function () {
     }
   }
 
-  //popupSucces.classList.add("popup-show");
   popupSurname.focus();
 });
 
@@ -71,9 +63,6 @@ popupForm.addEventListener("submit", function (evt) {
   } else {
     evt.preventDefault();
     popupError.classList.add("popup-show");
-    /*localStorage.setItem("surname", popupSurname.value);
-    localStorage.setItem("name", popupName.value);
-    localStorage.setItem("email", popupEmail.value);*/
   }
 });
 
@@ -94,24 +83,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-/*
-headerClose.addEventListener("click", function () {
-  evt.preventDefault();
-  headerClose.classList.remove("site-navigation__toggle-close");
-  headerClose.classList.add("site-navigation__toggle");
-  headerNav.classList.remove("site-navigation");
-  headerNav.classList.add("site-navigation-close");
-  headerBkg.classList.remove("header__menu--box");
-  headerBkg.classList.add("header__menu--close");
-});
-
-headerBurger.addEventListener("click", function () {
-  evt.preventDefault();
-  headerBurger.classList.remove("site-navigation__toggle");
-  headerBurger.classList.add("site-navigation__toggle-close");
-  headerNav.classList.remove("site-navigation-close");
-  headerNav.classList.add("site-navigation");
-  headerBkg.classList.remove("header__menu--close");
-  headerBkg.classList.add("header__menu--box");
-});
-*/

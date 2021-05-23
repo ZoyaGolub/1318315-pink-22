@@ -11,7 +11,6 @@ const rename = require("gulp-rename");
 const webp = require("gulp-webp");
 const htmlmin = require("gulp-htmlmin");
 const minify = require("gulp-minify");
-//const svgstore = require("svgstore");
 const clean = require("gulp-clean");
 
 // Styles
@@ -35,7 +34,7 @@ exports.styles = styles;
 
 // Server
 
-const server = (done) => { /**В демке по-другому прописан сервер 1:52:13*/
+const server = (done) => {
   sync.init({
     server: {
       baseDir: 'build'
@@ -110,18 +109,6 @@ const minjs = () => {
 
 exports.minjs = minjs;
 
-//Sprite
-/*Выдает ошибку*/ /*
-const sprite = () => {  /*
-  return gulp.src("source/img/logo-icon/logo-sprite/*.svg")
-    .pipe(svgstore({inLineSvg: true}))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.sprite = sprite;
-*/
-
 //Copy
 
 const copy = (done) => {
@@ -159,7 +146,7 @@ exports.default = gulp.series(
     server,
     watcher
   )
-); /*sprite,*/
+);
 
 const build = gulp.series(
   cleanbuild,
@@ -175,6 +162,6 @@ const build = gulp.series(
     server,
     watcher
   )
-); /*sprite,*/
+);
 
 exports.build = build;
