@@ -5,6 +5,7 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const reload = sync.reload;
 const csso = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
 const rename = require("gulp-rename");
@@ -37,10 +38,11 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
-    cors: true,
     notify: false,
+    open: true,
+    cors: true,
     ui: false,
   });
   done();
@@ -53,7 +55,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/javascript.js", gulp.series(minjs), sync.stream());
-  gulp.watch("source/*.html", gulp.series(htmlmin), sync.stream());
+  gulp.watch("source/*.html", gulp.series(htmlmin)).on("change", reload); //gulp.watch("source/*.html", gulp.series(htmlmin), sync.stream());
 }
 
 exports.watcher = watcher;

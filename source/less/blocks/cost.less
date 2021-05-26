@@ -1,0 +1,231 @@
+// Cost
+
+.cost {
+  @media (max-width: @mobail-width-only) {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.cost--box {
+  background-image: url("../img/index/grey-background-small_mob.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/grey-background-small_mob@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/index/grey-background-small_tab.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/grey-background-small_tab@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/index/grey-background-small_desk.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/grey-background-small_desk@2x.png");
+    }
+  }
+}
+
+.cost__table--box {
+  padding-top: 100px;
+  padding-bottom: 45px;
+
+  @media (max-width: @mobail-width-only) {
+    width: 1104px;
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    left: -529px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 160px;
+    padding-bottom: 98px;
+  }
+}
+
+.cost__tarif-item--box {
+  background-color: @black-blue;
+  border: 2px solid @black-blue;
+  height: 90px;
+
+  @media (min-width: @tablet-width) {
+    width: 152px;
+    height: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 233px;
+    height: 94px;
+  }
+}
+
+.cost__tarif-item--box-base {
+  border-radius: 1px 0 0 0;
+}
+
+.cost__tarif-item--box-unlim {
+  border-radius: 0 1px 0 0;
+}
+
+.cost__tarif-item--box-standard {
+  position: relative;
+}
+
+.cost__hit-background {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+
+  @media (max-width: @tablet-width-only) {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.cost__hit {
+  position: absolute;
+  top: 14px;
+  left: 13px;
+
+  @media (max-width: @tablet-width-only) {
+    top: 12px;
+    left: 7px;
+  }
+}
+
+.cost__tarif-name {
+  color: @white;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.cost__tarif-name--box {
+  margin-bottom: 0;
+
+  @media (max-width: @mobail-width-only) {
+    margin-top: 19px;
+  }
+}
+
+.cost__price {
+  color: @white;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.cost__price--box {
+  margin-top: 0;
+
+  @media (max-width: @mobail-width-only) {
+    margin-bottom: 35px;
+  }
+}
+
+.cost__services-item--angle-top-left {
+  border-radius: 1px 0 0 0;
+}
+
+.cost__services-yes-no--angle-top-right {
+  border-radius: 0 1px 0 0;
+}
+
+.cost__services-yes-no--angle-bottom-right {
+  border-radius: 0 0 1px 0;
+}
+
+.cost__services-item--angle-bottom-left {
+  border-radius: 0 0 0 1px;
+}
+
+.cost__services-item {
+  color: @black-blue;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.cost__services-item--inside-text {
+  text-transform: uppercase;
+  margin: 0 auto 0 0;
+  width: max-content;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.cost__services-item--box {
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding: 17px 15px;
+  }
+}
+
+.cost__services-yes-no--box {
+  background-color: @white;
+
+  @media (max-width: @mobail-width-only) {
+    display: table-cell;
+    height: 59px;
+    padding: 0 20px;
+    position: relative;
+  }
+}
+
+
+.cost__choice--box {
+  @media (max-width: @mobail-width-only) {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 10% 40%;
+  }
+}
+
+.cost__slider {
+  padding-bottom: 49px;
+}
+
+.cost__slider--box {
+  background-color: @grey;
+}
+
+.cost__slider--tablet-none {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

@@ -1,0 +1,156 @@
+// Header
+
+.header__menu--close {
+  width: 100%;
+  background-color: @black;
+  opacity: 0.3;
+}
+
+.header__menu--box {
+  @media (max-width: @tablet-width-only) {
+    width: 100%;
+    background-color: @black-blue;
+    box-shadow: 0 1px 0 @black, inset 0 1px 0 @grey-shadow;
+  }
+}
+
+.header__logo--box {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 0;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 0 40px;
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 25px 0 40px 0;
+    margin: 0 30px 0 0;
+    width: 100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header--box {
+    background-color: @black-light;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .header__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__navigation--box {
+    margin: 0 auto;
+    width: 940px;
+  }
+}
+
+.header__logo-mob {
+  fill: @white;
+
+  &:focus {
+    fill: @red;
+  }
+
+  &:hover {
+    fill: @red;
+  }
+
+  &:active {
+    fill: @white;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__logo-tab {
+  display: none;
+
+  &:focus {
+    fill: @red;
+  }
+
+  &:hover {
+    fill: @red;
+  }
+
+  &:active {
+    fill: @white;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__logo-desk {
+  display: none;
+
+  &:focus {
+    fill: @red;
+  }
+
+  &:hover {
+    fill: @red;
+  }
+
+  &:active {
+    fill: @white;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.header__toggle {
+  display: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.8487 1.37761e-06L0 20.8487L2.15131 23L23 2.15131L20.8487 1.37761e-06Z' fill='white'/%3E%3Cpath d='M2.15131 0L0 2.15131L20.8487 23L23 20.8487L2.15131 0Z' fill='white'/%3E%3C/svg%3E");
+  background-color: transparent;
+  width: 23px;
+  height: 23px;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    fill: @red;
+  }
+
+  &:hover {
+    fill: @red;
+  }
+
+  &:active {
+    fill: @red;
+    fill-opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

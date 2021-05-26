@@ -1,8 +1,8 @@
 const popupRequest = document.querySelector(".form__button-send--popup");
 const popupError = document.querySelector(".popup--error");
 const popupSucces = document.querySelector(".popup--succes");
-const popupEclose = document.querySelector(".popup-error__button");
-const popupSclose = document.querySelector(".popup-succes__button");
+const popupEclose = document.querySelector(".popup__error-button");
+const popupSclose = document.querySelector(".popup__succes-button");
 const popupForm = document.querySelector(".form");
 const popupSurname = document.querySelector(".form__surname");
 const popupName = document.querySelector(".form__name");
@@ -21,7 +21,7 @@ try {
 };
 
 popupRequest.addEventListener("click", function () {
-  popupError.classList.add("popup-show");
+  popupError.classList.add("popup--show");
 
   if (storage) {
     popupSurname.value = storage;
@@ -47,39 +47,39 @@ popupRequest.addEventListener("click", function () {
 
 popupSclose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popupSucces.classList.remove("popup-show");
+  popupSucces.classList.remove("popup--show");
 });
 
 popupEclose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popupError.classList.remove("popup-show");
+  popupError.classList.remove("popup--show");
 });
 
 popupForm.addEventListener("submit", function (evt) {
   if (!popupSurname.value || !popupName.value || !popupEmail.value) {
     evt.preventDefault();
-    popupSucces.classList.add("popup-show");
-    popupError.classList.remove("popup-show");
+    popupSucces.classList.add("popup--show");
+    popupError.classList.remove("popup--show");
   } else {
     evt.preventDefault();
-    popupError.classList.add("popup-show");
+    popupError.classList.add("popup--show");
   }
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (popupError.classList.contains("modal-show")) {
+    if (popupError.classList.contains("popup--show")) {
       evt.preventDefault();
-      popupError.classList.remove("modal-show");
+      popupError.classList.remove("popup--show");
     }
   }
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (popupSucces.classList.contains("modal-show")) {
+    if (popupSucces.classList.contains("popup--show")) {
       evt.preventDefault();
-      popupSucces.classList.remove("modal-show");
+      popupSucces.classList.remove("popup--show");
     }
   }
 });

@@ -9,10 +9,11 @@
   <link rel="icon" href="./img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicon/favicon.png" sizes="16x16" type="image/png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/opensans.woff2" as="font">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="page__body">
+<body class="body">
   <svg style="display: none;">
     <symbol id="twitter" viewBox="0 0 18 14">
       <g fill="#D22856">
@@ -34,7 +35,7 @@
     </symbol>
   </svg>
   <header class="header header--box">
-    <div class="header__navigation header__navigation--box ">
+    <div class="header__navigation header__navigation--box">
       <div class="header__menu header__menu--box">
         <div class="header__logo header__logo--box">
           <div class="header__logo-icon">
@@ -66,10 +67,10 @@
               </svg>
             </a>
           </div>
-          <button class="site-navigation__toggle" type="button"><span class="visually-hidden">Открыть навигацию по сайту</span></button>
+          <button class="header__toggle header__toggle--open header__toggle--close" type="button"><span class="visually-hidden">Открыть навигацию по сайту</span></button>
         </div>
       </div>
-      <div class="site-navigation">
+      <div class="site-navigation site-navigation--open site-navigation--close">
         <div class="site-navigation__box">
           <ul class="site-navigation__list">
             <li class="site-navigation__item site-navigation__item--box">
@@ -92,57 +93,59 @@
   <main>
     <h1 class="visually-hidden">Pink - это мобильное приложение для раскрашивания серых будней в розоавй цвет</h1>
     <div class="caption caption--box">
-      <h2 class="caption__slogan caption__slogan--box container">Взгляните на жизнь иначе!</h2>
-      <div class="caption__links caption__links--box">
-        <a class="caption__link caption__link--box" href="#">Скачать приложение</a>
-        <ul class="caption__links-icon-list">
-          <li class="caption__links-icon-item">
-            <a class="caption__links-icon-item caption__links-icon-item--box" href="#" aria-label="Скачать приложение для iOS">
-              <svg width="47" height="56" viewBox="0 0 47 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M39.2449 29.7391C39.2544 32.1546 39.994 34.5144 41.3723 36.5268C42.7506 38.5393 44.7071 40.1162 47 41.0627C46.0779 43.8922 44.7301 46.5744 43.0003 49.0227C40.5985 52.4356 38.0949 55.8386 34.1562 55.9273C30.2176 56.0161 29.0676 53.708 24.6303 53.708C20.193 53.708 18.8292 55.8583 15.1654 55.9964C11.5016 56.1345 8.47889 52.2778 6.07705 48.8846C1.1207 41.98 -2.67543 29.246 2.41322 20.6842C3.60995 18.6123 5.34099 16.8769 7.43708 15.6476C9.53317 14.4183 11.9225 13.7373 14.3716 13.6711C18.0964 13.6021 21.6178 16.0976 23.8975 16.0976C26.1772 16.0976 30.4619 13.0892 34.9602 13.533C37.0437 13.6063 39.0815 14.1457 40.9142 15.1091C42.7468 16.0725 44.3247 17.4337 45.5243 19.0863C45.2495 19.254 39.2144 22.657 39.2754 29.7391H39.2449ZM31.9783 8.93654C34.1591 6.45976 35.2387 3.24645 34.9806 0C31.6761 0.302095 28.6167 1.81996 26.4317 4.2414C24.5692 6.33251 22.9307 9.68618 23.3785 12.9018C26.625 13.1484 29.9327 11.3038 31.9478 8.95627" fill="white" />
-              </svg>
-            </a>
-          </li>
-          <li class="caption__links-icon-item">
-            <a class="caption__links-icon-item caption__links-icon-item--box" href="#" aria-label="Скачать приложение для Андроид">
-              <svg width="43" height="47" viewBox="0 0 43 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M34.8864 14.0617H8.11359C8.11359 14.1718 8.11359 14.282 8.11359 14.3922V33.1955C8.10298 34.1078 8.44648 34.99 9.0745 35.6633C9.70251 36.3367 10.5681 36.7508 11.496 36.8219V44.2751C11.5402 45.0122 11.8701 45.7048 12.4181 46.2114C12.9661 46.7179 13.6909 47 14.444 47C15.1972 47 15.9219 46.7179 16.4699 46.2114C17.0179 45.7048 17.3478 45.0122 17.3921 44.2751V36.842H25.6283V44.2751C25.6726 45.0122 26.0025 45.7048 26.5505 46.2114C27.0985 46.7179 27.8232 47 28.5764 47C29.3296 47 30.0543 46.7179 30.6023 46.2114C31.1503 45.7048 31.4802 45.0122 31.5245 44.2751V36.8219C32.4532 36.7509 33.32 36.3371 33.9496 35.664C34.5793 34.991 34.925 34.1088 34.917 33.1955V14.4023C34.9068 14.2921 34.8966 14.1819 34.8864 14.0617Z" fill="#A4C639" />
-                <path d="M2.95318 15.7446C3.73371 15.7446 4.48226 16.0486 5.03417 16.5897C5.58609 17.1307 5.89615 17.8646 5.89615 18.6297V31.0317C5.89749 31.4114 5.82236 31.7876 5.67507 32.1388C5.52777 32.49 5.31121 32.8093 5.03779 33.0782C4.76438 33.3472 4.4395 33.5606 4.08177 33.7062C3.72405 33.8518 3.34052 33.9268 2.95318 33.9268C2.16995 33.9268 1.4188 33.6218 0.864967 33.0788C0.311138 32.5359 0 31.7995 0 31.0317V18.6297C-2.33488e-06 18.25 0.076457 17.874 0.224993 17.5233C0.37353 17.1726 0.591221 16.8541 0.865584 16.5861C1.13995 16.3181 1.46558 16.1058 1.82382 15.9614C2.18206 15.817 2.56585 15.7433 2.95318 15.7446Z" fill="#A4C639" />
-                <path d="M40.057 15.7446C40.8375 15.7446 41.5861 16.0486 42.138 16.5897C42.6899 17.1307 43 17.8646 43 18.6297V31.0317C43.0013 31.4114 42.9262 31.7876 42.7789 32.1388C42.6316 32.49 42.415 32.8093 42.1416 33.0782C41.8682 33.3472 41.5433 33.5606 41.1856 33.7062C40.8279 33.8518 40.4444 33.9268 40.057 33.9268C39.2738 33.9268 38.5226 33.6218 37.9688 33.0788C37.415 32.5359 37.1038 31.7995 37.1038 31.0317V18.6297C37.1038 18.25 37.1803 17.874 37.3288 17.5233C37.4774 17.1726 37.6951 16.8541 37.9694 16.5861C38.2438 16.3181 38.5694 16.1058 38.9277 15.9614C39.2859 15.817 39.6697 15.7433 40.057 15.7446Z" fill="#A4C639" />
-                <path d="M8.1749 12.0581H34.7433C34.6757 9.30184 33.5048 6.68226 31.4836 4.76521L34.0485 0.497656C34.0753 0.460664 34.0936 0.418348 34.1019 0.373689C34.1103 0.32903 34.1086 0.283115 34.0969 0.239179C34.0852 0.195243 34.0638 0.154355 34.0343 0.119396C34.0047 0.0844363 33.9677 0.0562562 33.9258 0.0368408C33.8548 -0.000483829 33.7719 -0.00986479 33.6941 0.010608C33.6163 0.0310808 33.5493 0.079868 33.5069 0.147036L31.0851 4.30439C28.3256 2.19779 24.9549 1.00508 21.4591 0.898365C17.9845 1.03299 14.6384 2.22325 11.8843 4.30439L9.50332 0.187107C9.46579 0.112239 9.39997 0.0546621 9.31983 0.0266048C9.2397 -0.00145257 9.15156 0.00221937 9.07414 0.0368408C9.00488 0.0802746 8.95485 0.147693 8.93402 0.225666C8.91319 0.303639 8.92308 0.386444 8.96174 0.457585L11.4551 4.69508C9.41279 6.62849 8.2336 9.27542 8.1749 12.0581ZM25.8736 6.84889C25.8736 6.45036 26.0351 6.06816 26.3225 5.78635C26.61 5.50455 26.9998 5.34623 27.4064 5.34623C27.8129 5.34623 28.2028 5.50455 28.4902 5.78635C28.7777 6.06816 28.9391 6.45036 28.9391 6.84889C28.9391 7.24742 28.7777 7.62963 28.4902 7.91143C28.2028 8.19324 27.8129 8.35155 27.4064 8.35155C26.9998 8.35155 26.61 8.19324 26.3225 7.91143C26.0351 7.62963 25.8736 7.24742 25.8736 6.84889ZM14.49 6.84889C14.49 6.45036 14.6515 6.06816 14.939 5.78635C15.2264 5.50455 15.6163 5.34623 16.0228 5.34623C16.4293 5.34623 16.8192 5.50455 17.1067 5.78635C17.3941 6.06816 17.5556 6.45036 17.5556 6.84889C17.5556 7.24742 17.3941 7.62963 17.1067 7.91143C16.8192 8.19324 16.4293 8.35155 16.0228 8.35155C15.6163 8.35155 15.2264 8.19324 14.939 7.91143C14.6515 7.62963 14.49 7.24742 14.49 6.84889Z" fill="#A4C639" />
-              </svg>
-            </a>
-          </li>
-          <li class="caption__links-icon-item">
-            <a class="caption__links-icon-item caption__links-icon-item--box" href="#" aria-label="Скачать приложение для Microsoft">
-              <svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.908 19.5238H0V0H20.908V19.5238Z" fill="#F05423" />
-                <path d="M44 19.5238H23.092V0H44V19.5238Z" fill="#84C441" />
-                <path d="M20.908 41H0V21.4762H20.908V41Z" fill="#2DABE2" />
-                <path d="M44 41H23.092V21.4762H44V41Z" fill="#F9BC15" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <p class="caption__links-description caption__links-description--box">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-      </div>
-      <div class="caption__img">
-        <picture class="caption__img-hand-phone">
-          <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/hand-phone_desk.webp 1x, ./img/index/hand-phone_desk@2x.webp 2x" width="1050" height="645">
-          <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/hand-phone_tab.webp 1x, ./img/index/hand-phone_tab@2x.webp 2x" width="660" height="545">
-          <source type="image/webp" srcset="./img/index/hand-phone_mob.webp 1x, ./img/index/hand-phone_mob@2x.webp 2x" width="320" height="286">
-          <source media="(min-width: 940px)" srcset="./img/index/hand-phone_desk.png 1x, ./img/index/hand-phone_desk@2x.png 2x" width="1050" height="645">
-          <source media="(min-width: 620px)" srcset="./img/index/hand-phone_tab.png 1x, ./img/index/hand-phone_tab@2x.png 2x" width="660" height="545">
-          <img src="./img/index/hand-phone_mob.png" srcset="./img/index/hand-phone_mob@2x.png" width="320" height="286" alt="Мобильный телефон в вашей руке">
-        </picture>
-        <picture class="caption__img-phone-screen">
-          <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-house_desk.webp 1x, ./img/index/screen-house_desk@2x.webp 2x" width="230" height="408">
-          <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-house_tab.webp 1x, ./img/index/screen-house_tab@2x.webp 2x" width="195" height="346">
-          <source type="image/webp" srcset="./img/index/screen-house_mob.webp 1x, ./img/index/screen-house_mob@2x.webp 2x" width="111" height="197">
-          <source media="(min-width: 940px)" srcset="./img/index/screen-house_desk.jpg 1x, ./img/index/screen-house_desk@2x.jpg 2x" width="230" height="408">
-          <source media="(min-width: 620px)" srcset="./img/index/screen-house_tab.jpg 1x, ./img/index/screen-house_tab@2x.jpg 2x" width="195" height="346">
-          <img src="./img/index/screen-house_mob.jpg" srcset="./img/index/screen-house_mob@2x.jpg" width="111" height="197" alt="Изображение на экране мобильного телефона">
-        </picture>
+      <div class="caption__content caption__content--box">
+        <h2 class="caption__slogan caption__slogan--box container">Взгляните на жизнь иначе!</h2>
+        <div class="caption__links caption__links--box">
+          <a class="caption__link caption__link--box" href="https://www.apple.com">Скачать приложение</a>
+          <ul class="caption__links-icon-list">
+            <li class="caption__links-icon-item">
+              <a class="caption__links-icon-item caption__links-icon-item--box" href="https://www.apple.com" aria-label="Скачать приложение для iOS">
+                <svg width="47" height="56" viewBox="0 0 47 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M39.2449 29.7391C39.2544 32.1546 39.994 34.5144 41.3723 36.5268C42.7506 38.5393 44.7071 40.1162 47 41.0627C46.0779 43.8922 44.7301 46.5744 43.0003 49.0227C40.5985 52.4356 38.0949 55.8386 34.1562 55.9273C30.2176 56.0161 29.0676 53.708 24.6303 53.708C20.193 53.708 18.8292 55.8583 15.1654 55.9964C11.5016 56.1345 8.47889 52.2778 6.07705 48.8846C1.1207 41.98 -2.67543 29.246 2.41322 20.6842C3.60995 18.6123 5.34099 16.8769 7.43708 15.6476C9.53317 14.4183 11.9225 13.7373 14.3716 13.6711C18.0964 13.6021 21.6178 16.0976 23.8975 16.0976C26.1772 16.0976 30.4619 13.0892 34.9602 13.533C37.0437 13.6063 39.0815 14.1457 40.9142 15.1091C42.7468 16.0725 44.3247 17.4337 45.5243 19.0863C45.2495 19.254 39.2144 22.657 39.2754 29.7391H39.2449ZM31.9783 8.93654C34.1591 6.45976 35.2387 3.24645 34.9806 0C31.6761 0.302095 28.6167 1.81996 26.4317 4.2414C24.5692 6.33251 22.9307 9.68618 23.3785 12.9018C26.625 13.1484 29.9327 11.3038 31.9478 8.95627" fill="white" />
+                </svg>
+              </a>
+            </li>
+            <li class="caption__links-icon-item">
+              <a class="caption__links-icon-item caption__links-icon-item--box" href="https://www.android.com/intl/ru_ru/" aria-label="Скачать приложение для Андроид">
+                <svg width="43" height="47" viewBox="0 0 43 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M34.8864 14.0617H8.11359C8.11359 14.1718 8.11359 14.282 8.11359 14.3922V33.1955C8.10298 34.1078 8.44648 34.99 9.0745 35.6633C9.70251 36.3367 10.5681 36.7508 11.496 36.8219V44.2751C11.5402 45.0122 11.8701 45.7048 12.4181 46.2114C12.9661 46.7179 13.6909 47 14.444 47C15.1972 47 15.9219 46.7179 16.4699 46.2114C17.0179 45.7048 17.3478 45.0122 17.3921 44.2751V36.842H25.6283V44.2751C25.6726 45.0122 26.0025 45.7048 26.5505 46.2114C27.0985 46.7179 27.8232 47 28.5764 47C29.3296 47 30.0543 46.7179 30.6023 46.2114C31.1503 45.7048 31.4802 45.0122 31.5245 44.2751V36.8219C32.4532 36.7509 33.32 36.3371 33.9496 35.664C34.5793 34.991 34.925 34.1088 34.917 33.1955V14.4023C34.9068 14.2921 34.8966 14.1819 34.8864 14.0617Z" fill="#A4C639" />
+                  <path d="M2.95318 15.7446C3.73371 15.7446 4.48226 16.0486 5.03417 16.5897C5.58609 17.1307 5.89615 17.8646 5.89615 18.6297V31.0317C5.89749 31.4114 5.82236 31.7876 5.67507 32.1388C5.52777 32.49 5.31121 32.8093 5.03779 33.0782C4.76438 33.3472 4.4395 33.5606 4.08177 33.7062C3.72405 33.8518 3.34052 33.9268 2.95318 33.9268C2.16995 33.9268 1.4188 33.6218 0.864967 33.0788C0.311138 32.5359 0 31.7995 0 31.0317V18.6297C-2.33488e-06 18.25 0.076457 17.874 0.224993 17.5233C0.37353 17.1726 0.591221 16.8541 0.865584 16.5861C1.13995 16.3181 1.46558 16.1058 1.82382 15.9614C2.18206 15.817 2.56585 15.7433 2.95318 15.7446Z" fill="#A4C639" />
+                  <path d="M40.057 15.7446C40.8375 15.7446 41.5861 16.0486 42.138 16.5897C42.6899 17.1307 43 17.8646 43 18.6297V31.0317C43.0013 31.4114 42.9262 31.7876 42.7789 32.1388C42.6316 32.49 42.415 32.8093 42.1416 33.0782C41.8682 33.3472 41.5433 33.5606 41.1856 33.7062C40.8279 33.8518 40.4444 33.9268 40.057 33.9268C39.2738 33.9268 38.5226 33.6218 37.9688 33.0788C37.415 32.5359 37.1038 31.7995 37.1038 31.0317V18.6297C37.1038 18.25 37.1803 17.874 37.3288 17.5233C37.4774 17.1726 37.6951 16.8541 37.9694 16.5861C38.2438 16.3181 38.5694 16.1058 38.9277 15.9614C39.2859 15.817 39.6697 15.7433 40.057 15.7446Z" fill="#A4C639" />
+                  <path d="M8.1749 12.0581H34.7433C34.6757 9.30184 33.5048 6.68226 31.4836 4.76521L34.0485 0.497656C34.0753 0.460664 34.0936 0.418348 34.1019 0.373689C34.1103 0.32903 34.1086 0.283115 34.0969 0.239179C34.0852 0.195243 34.0638 0.154355 34.0343 0.119396C34.0047 0.0844363 33.9677 0.0562562 33.9258 0.0368408C33.8548 -0.000483829 33.7719 -0.00986479 33.6941 0.010608C33.6163 0.0310808 33.5493 0.079868 33.5069 0.147036L31.0851 4.30439C28.3256 2.19779 24.9549 1.00508 21.4591 0.898365C17.9845 1.03299 14.6384 2.22325 11.8843 4.30439L9.50332 0.187107C9.46579 0.112239 9.39997 0.0546621 9.31983 0.0266048C9.2397 -0.00145257 9.15156 0.00221937 9.07414 0.0368408C9.00488 0.0802746 8.95485 0.147693 8.93402 0.225666C8.91319 0.303639 8.92308 0.386444 8.96174 0.457585L11.4551 4.69508C9.41279 6.62849 8.2336 9.27542 8.1749 12.0581ZM25.8736 6.84889C25.8736 6.45036 26.0351 6.06816 26.3225 5.78635C26.61 5.50455 26.9998 5.34623 27.4064 5.34623C27.8129 5.34623 28.2028 5.50455 28.4902 5.78635C28.7777 6.06816 28.9391 6.45036 28.9391 6.84889C28.9391 7.24742 28.7777 7.62963 28.4902 7.91143C28.2028 8.19324 27.8129 8.35155 27.4064 8.35155C26.9998 8.35155 26.61 8.19324 26.3225 7.91143C26.0351 7.62963 25.8736 7.24742 25.8736 6.84889ZM14.49 6.84889C14.49 6.45036 14.6515 6.06816 14.939 5.78635C15.2264 5.50455 15.6163 5.34623 16.0228 5.34623C16.4293 5.34623 16.8192 5.50455 17.1067 5.78635C17.3941 6.06816 17.5556 6.45036 17.5556 6.84889C17.5556 7.24742 17.3941 7.62963 17.1067 7.91143C16.8192 8.19324 16.4293 8.35155 16.0228 8.35155C15.6163 8.35155 15.2264 8.19324 14.939 7.91143C14.6515 7.62963 14.49 7.24742 14.49 6.84889Z" fill="#A4C639" />
+                </svg>
+              </a>
+            </li>
+            <li class="caption__links-icon-item">
+              <a class="caption__links-icon-item caption__links-icon-item--box" href="https://www.microsoft.com" aria-label="Скачать приложение для Microsoft">
+                <svg width="44" height="41" viewBox="0 0 44 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20.908 19.5238H0V0H20.908V19.5238Z" fill="#F05423" />
+                  <path d="M44 19.5238H23.092V0H44V19.5238Z" fill="#84C441" />
+                  <path d="M20.908 41H0V21.4762H20.908V41Z" fill="#2DABE2" />
+                  <path d="M44 41H23.092V21.4762H44V41Z" fill="#F9BC15" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="caption__links-description caption__links-description--box">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+        <div class="caption__img">
+          <picture class="caption__img-hand-phone">
+            <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/hand-phone_desk.webp 1x, ./img/index/hand-phone_desk@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/hand-phone_tab.webp 1x, ./img/index/hand-phone_tab@2x.webp 2x">
+            <source type="image/webp" srcset="./img/index/hand-phone_mob.webp 1x, ./img/index/hand-phone_mob@2x.webp 2x">
+            <source media="(min-width: 940px)" srcset="./img/index/hand-phone_desk.png 1x, ./img/index/hand-phone_desk@2x.png 2x">
+            <source media="(min-width: 620px)" srcset="./img/index/hand-phone_tab.png 1x, ./img/index/hand-phone_tab@2x.png 2x">
+            <img class="caption__img-hand-phone" src="./img/index/hand-phone_mob.png" srcset="./img/index/hand-phone_mob@2x.png" width="1050" height="645" alt="Мобильный телефон в вашей руке">
+          </picture>
+          <picture class="caption__img-phone-screen">
+            <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-house_desk.webp 1x, ./img/index/screen-house_desk@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-house_tab.webp 1x, ./img/index/screen-house_tab@2x.webp 2x">
+            <source type="image/webp" srcset="./img/index/screen-house_mob.webp 1x, ./img/index/screen-house_mob@2x.webp 2x">
+            <source media="(min-width: 940px)" srcset="./img/index/screen-house_desk.jpg 1x, ./img/index/screen-house_desk@2x.jpg 2x">
+            <source media="(min-width: 620px)" srcset="./img/index/screen-house_tab.jpg 1x, ./img/index/screen-house_tab@2x.jpg 2x">
+            <img class="caption__img-phone-screen" src="./img/index/screen-house_mob.jpg" srcset="./img/index/screen-house_mob@2x.jpg" width="111" height="197" alt="Изображение на экране мобильного телефона">
+          </picture>
+        </div>
       </div>
     </div>
     <div class="info">
@@ -170,79 +173,79 @@
           <ul class="info__effects-img-list container">
             <li class="info__effects-img-item info__effects-img-item--box">
               <picture class="info__effects-img-phone info__effects-img-phone--box info__effects-img-phone-one">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x" width="186" height="382">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x" width="268" height="574">
-                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x" width="157" height="320">
-                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x" width="186" height="382">
-                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x" width="268" height="574">
-                <img src="./img/index/phone_mob.png" srcset="./img/index/phone_mob@2x.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x">
+                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x">
+                <img class="info__effects-img-phone info__effects-img-phone--box info__effects-img-phone-one" src="./img/index/phone_mob.png" srcset="./img/index/phone_mob@2x.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
               </picture>
               <picture class="info__effects-img-screen info__effects-img-screen--box info__effects-img-screen-one">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-garbage-one_desk.webp 1x, ./img/index/screen-garbage-one_desk@2x.webp 2x" width="165" height="294">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-garbage-one_tab.webp 1x, ./img/index/screen-garbage-one_tab@2x.webp 2x" width="237" height="421">
-                <source type="image/webp" srcset="img/index/screen-garbage-one_mob.webp 1x, ./img/index/screen-garbage-one_mob@2x.webp 2x" width="136" height="245">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-garbage-one_desk.webp 1x, ./img/index/screen-garbage-one_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-garbage-one_tab.webp 1x, ./img/index/screen-garbage-one_tab@2x.webp 2x">
+                <source type="image/webp" srcset="img/index/screen-garbage-one_mob.webp 1x, ./img/index/screen-garbage-one_mob@2x.webp 2x">
                 <source media="(min-width: 940px)" srcset="./img/index/screen-garbage-one_desk.jpg 1x, ./img/index/screen-garbage-one_desk@2x.jpg 2x">
-                <source media="(min-width: 620px)" srcset="./img/index/screen-garbage-one_tab.jpg 1x, ./img/index/screen-garbage-one_tab@2x.jpg 2x" width="237" height="421">
-                <img src="./img/index/screen-garbage-one_mob.jpg" srcset=".img/index/screen-garbage-one_mob@2x.jpg" width="136" height="245" alt="Любая фотография, например, баки для мусора">
+                <source media="(min-width: 620px)" srcset="./img/index/screen-garbage-one_tab.jpg 1x, ./img/index/screen-garbage-one_tab@2x.jpg 2x">
+                <img class="info__effects-img-screen info__effects-img-screen--box info__effects-img-screen-one" src="./img/index/screen-garbage-one_mob.jpg" srcset=".img/index/screen-garbage-one_mob@2x.jpg" width="136" height="245" alt="Любая фотография, например, баки для мусора">
               </picture>
               <picture class="info__effects-img-shadow">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x" width="300" height="17">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x" width="300" height="17">
-                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x" width="300" height="17">
-                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x" width="300" height="17">
-                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x" width="300" height="17">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x">
+                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x">
                 <img src="./img/index/shadow-phone_desk.png" srcset="./img/index/shadow-phone_desk@2x.png" width="300" height="17" alt="Тень от телефона">
               </picture>
             </li>
             <li class="info__effects-img-item info__effects-img-item--box">
               <picture class="info__effects-img-phone info__effects-img-phone--box info__effects-img-phone-two">
-                <source type="image/webp" media="(min-width: 940px)" srcset="img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x" width="186" height="382">
-                <source type="image/webp" media="(min-width: 620px)" srcset="img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x" width="268" height="574">
-                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x" width="157" height="320">
-                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x" width="186" height="382">
-                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x" width="268" height="574">
-                <img src="./img/index/phone_mob.png" srcset="./img/index/phone_mob@2x.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x">
+                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x">
+                <img class="info__effects-img-phone info__effects-img-phone--box info__effects-img-phone-two" src="./img/index/phone_mob.png" srcset="./img/index/phone_mob@2x.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
               </picture>
               <picture class="info__effects-img-screen info__effects-img-screen--box info__effects-img-screen-two">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-garbage-two_desk.webp 1x, ./img/index/screen-garbage-two_desk@2x.webp 2x" width="165" height="294">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-garbage-two_tab.webp 1x, ./img/index/screen-garbage-two_tab@2x.webp 2x" width="237" height="421">
-                <source type="image/webp" srcset="./img/index/screen-garbage-two_mob.webp 1x, ./img/index/screen-garbage-two_mob@2x.webp 2x" width="136" height="245">
-                <source media="(min-width: 940px)" srcset="./img/index/screen-garbage-two_desk.jpg 1x, ./img/index/screen-garbage-two_desk@2x.jpg 2x" width="165" height="294">
-                <source media="(min-width: 620px)" srcset="./img/index/screen-garbage-two_tab.jpg 1x, ./img/index/screen-garbage-two_tab@2x.jpg 2x" width="237" height="421">
-                <img src="./img/index/screen-garbage-two_mob.jpg" srcset="./img/index/screen-garbage-two_mob@2x.jpg" width="136" height="245" alt="На фотографию наложен малиновый фильтр">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-garbage-two_desk.webp 1x, ./img/index/screen-garbage-two_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-garbage-two_tab.webp 1x, ./img/index/screen-garbage-two_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/screen-garbage-two_mob.webp 1x, ./img/index/screen-garbage-two_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="./img/index/screen-garbage-two_desk.jpg 1x, ./img/index/screen-garbage-two_desk@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="./img/index/screen-garbage-two_tab.jpg 1x, ./img/index/screen-garbage-two_tab@2x.jpg 2x">
+                <img class="info__effects-img-screen info__effects-img-screen--box info__effects-img-screen-two" src="./img/index/screen-garbage-two_mob.jpg" srcset="./img/index/screen-garbage-two_mob@2x.jpg" width="136" height="245" alt="На фотографию наложен малиновый фильтр">
               </picture>
               <picture class="info__effects-img-shadow">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x" width="300" height="17">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x" width="300" height="17">
-                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x" width="300" height="17">
-                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x" width="300" height="17">
-                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x" width="300" height="17">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x">
+                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x">
                 <img src="./img/index/shadow-phone_desk.png" srcset="./img/index/shadow-phone_desk@2x.png" width="300" height="17" alt="Тень от телефона">
               </picture>
             </li>
             <li class="info__effects-img-item info__effects-img-item--box">
               <picture class="info__effects-img-phone info__effects-img-phone--box info__effects-img-phone-three">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x" width="186" height="382">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x" width="268" height="574">
-                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x" width="157" height="320">
-                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x" width="186" height="382">
-                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x" width="268" height="574">
-                <img src="./img/index/phone_mob.png" srcset="./img/index/phone_mob@2x.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x">
+                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x">
+                <img class="info__effects-img-phone info__effects-img-phone--box info__effects-img-phone-three" src="./img/index/phone_mob.png" srcset="./img/index/phone_mob@2x.png" width="157" height="320" alt="Мобильный телефон с первым шагом в использовании приложения">
               </picture>
-              <picture class="info__effects-img-screen info__effects-img-phone--box info__effects-img-screen-three">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-garbage-three_desk.webp 1x, ./img/index/screen-garbage-three_desk@2x.webp 2x" width="165" height="294">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-garbage-three_tab.webp 1x, ./img/index/screen-garbage-three_tab@2x.webp 2x" width="237" height="421">
-                <source type="image/webp" srcset="./img/index/screen-garbage-three_mob.webp 1x, ./img/index/screen-garbage-three_mob@2x.webp 2x" width="136" height="245">
-                <source media="(min-width: 940px)" srcset="img/index/screen-garbage-three_desk.jpg 1x, ./img/index/screen-garbage-three_desk@2x.jpg 2x" width="165" height="294">
-                <source media="(min-width: 620px)" srcset="img/index/screen-garbage-three_tab.jpg 1x, ./img/index/screen-garbage-three_tab@2x.jpg 2x" width="237" height="421">
-                <img src="./img/index/screen-garbage-three_mob.jpg" srcset="./img/index/screen-garbage-three_mob@2x.jpg" width="136" height="245" alt="Фотография с фильтром украшена смайликом и подписью">
+              <picture class="info__effects-img-screen info__effects-img-screen--box info__effects-img-screen-three">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/screen-garbage-three_desk.webp 1x, ./img/index/screen-garbage-three_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/screen-garbage-three_tab.webp 1x, ./img/index/screen-garbage-three_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/screen-garbage-three_mob.webp 1x, ./img/index/screen-garbage-three_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/index/screen-garbage-three_desk.jpg 1x, ./img/index/screen-garbage-three_desk@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/index/screen-garbage-three_tab.jpg 1x, ./img/index/screen-garbage-three_tab@2x.jpg 2x">
+                <img class="info__effects-img-screen info__effects-img-screen--box info__effects-img-screen-three" src="./img/index/screen-garbage-three_mob.jpg" srcset="./img/index/screen-garbage-three_mob@2x.jpg" width="136" height="245" alt="Фотография с фильтром украшена смайликом и подписью">
               </picture>
               <picture class="info__effects-img-shadow">
-                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x" width="300" height="17">
-                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x" width="300" height="17">
-                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x" width="300" height="17">
-                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x" width="300" height="17">
-                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x" width="300" height="17">
+                <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/phone_desk.webp 1x, ./img/index/phone_desk@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/phone_tab.webp 1x, ./img/index/phone_tab@2x.webp 2x">
+                <source type="image/webp" srcset="./img/index/phone_mob.webp 1x, ./img/index/phone_mob@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="./img/index/phone_desk.png 1x, ./img/index/phone_desk@2x.png 2x">
+                <source media="(min-width: 620px)" srcset="./img/index/phone_tab.png 1x, ./img/index/phone_tab@2x.png 2x">
                 <img src="./img/index/shadow-phone_desk.png" srcset="./img/index/shadow-phone_desk@2x.png" width="300" height="17" alt="Тень от телефона">
               </picture>
             </li>
@@ -250,21 +253,23 @@
         </div>
       </div>
       <div class="researchtion researchtion--box container">
-        <div class="researchtion__img">
-          <svg class="researchtion__img-clock" width="238" height="276" viewBox="0 0 238 276" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M211.314 81.6277L215.587 77.3408C221.752 71.1663 222.878 62.1925 218.086 57.4017C213.294 52.6109 204.334 53.7227 198.176 59.8971L193.871 64.208C176.746 50.2779 156.074 41.4187 134.187 38.6304V30.9603H140.305C149.019 30.9603 156.151 23.994 156.151 15.4842C156.151 6.97427 149.019 0 140.305 0H97.7208C89.0075 0 81.8755 6.96627 81.8755 15.4842C81.8755 24.002 89.0075 30.9603 97.7208 30.9603H103.839V38.6304C77.6967 41.9933 53.4093 53.9522 34.7872 72.6308C16.1652 91.3093 4.26218 115.651 0.945904 141.835C-2.37038 168.02 3.08771 194.566 16.4638 217.309C29.8399 240.052 50.377 257.704 74.8528 267.496C99.3286 277.288 126.358 278.665 151.7 271.412C177.042 264.16 199.263 248.687 214.875 227.421C230.488 206.156 238.609 180.302 237.964 153.915C237.32 127.529 227.946 102.103 211.314 81.6277ZM119.013 244.947C101.61 244.947 84.5984 239.779 70.1286 230.097C55.6589 220.414 44.3813 206.652 37.7219 190.551C31.0625 174.45 29.3205 156.733 32.7162 139.64C36.1119 122.547 44.4927 106.847 56.7989 94.5241C69.105 82.2015 84.7837 73.81 101.852 70.411C118.921 67.012 136.613 68.7581 152.69 75.4285C168.768 82.0989 182.509 93.3939 192.176 107.885C201.844 122.377 207.003 139.413 207.001 156.841C206.999 180.209 197.728 202.619 181.227 219.142C164.726 235.665 142.348 244.947 119.013 244.947Z" fill="#DEDEDE"/>
-          </svg>
-          <svg class="researchtion__img-displey" width="202" height="202" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="101" cy="101" r="93" stroke="#D22856" stroke-width="16"/>
-          </svg>
-          <svg class="researchtion__img-time" width="106" height="70" viewBox="0 0 106 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M48.9062 70H1V59.9219L18.2031 42.5312C23.2969 37.3125 26.625 33.7031 28.1875 31.7031C29.75 29.6719 30.875 27.7969 31.5625 26.0781C32.25 24.3594 32.5938 22.5781 32.5938 20.7344C32.5938 17.9844 31.8281 15.9375 30.2969 14.5938C28.7969 13.25 26.7812 12.5781 24.25 12.5781C21.5938 12.5781 19.0156 13.1875 16.5156 14.4062C14.0156 15.625 11.4062 17.3594 8.6875 19.6094L0.8125 10.2812C4.1875 7.40625 6.98438 5.375 9.20312 4.1875C11.4219 3 13.8438 2.09375 16.4688 1.46875C19.0938 0.8125 22.0312 0.484375 25.2812 0.484375C29.5625 0.484375 33.3438 1.26563 36.625 2.82812C39.9062 4.39062 42.4531 6.57812 44.2656 9.39062C46.0781 12.2031 46.9844 15.4219 46.9844 19.0469C46.9844 22.2031 46.4219 25.1719 45.2969 27.9531C44.2031 30.7031 42.4844 33.5312 40.1406 36.4375C37.8281 39.3438 33.7344 43.4844 27.8594 48.8594L19.0469 57.1562V57.8125H48.9062V70ZM105.297 55.7969H97.0469V70H82.8906V55.7969H53.6406V45.7188L83.6875 1.46875H97.0469V44.5469H105.297V55.7969ZM82.8906 44.5469V32.9219C82.8906 30.9844 82.9688 28.1719 83.125 24.4844C83.2812 20.7969 83.4062 18.6563 83.5 18.0625H83.125C81.9688 20.625 80.5781 23.125 78.9531 25.5625L66.3906 44.5469H82.8906Z" fill="#D22856"/>
-          </svg>
-        </div>
-        <div class="researchtion__desc">
-          <p class="researchtion__desc-cap">Эффект на 24 часа!</p>
-          <p class="researchtion__desc-text researchtion__desc-text--box">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
-          <a class="researchtion__desc-link" href="#" aria-label="Переход на страницу британского исследования">Узнать больше об исследовании</a>
+        <div class="researchtion__content researchtion__content--box">
+          <div class="researchtion__img">
+            <svg class="researchtion__img-clock" width="238" height="276" viewBox="0 0 238 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M211.314 81.6277L215.587 77.3408C221.752 71.1663 222.878 62.1925 218.086 57.4017C213.294 52.6109 204.334 53.7227 198.176 59.8971L193.871 64.208C176.746 50.2779 156.074 41.4187 134.187 38.6304V30.9603H140.305C149.019 30.9603 156.151 23.994 156.151 15.4842C156.151 6.97427 149.019 0 140.305 0H97.7208C89.0075 0 81.8755 6.96627 81.8755 15.4842C81.8755 24.002 89.0075 30.9603 97.7208 30.9603H103.839V38.6304C77.6967 41.9933 53.4093 53.9522 34.7872 72.6308C16.1652 91.3093 4.26218 115.651 0.945904 141.835C-2.37038 168.02 3.08771 194.566 16.4638 217.309C29.8399 240.052 50.377 257.704 74.8528 267.496C99.3286 277.288 126.358 278.665 151.7 271.412C177.042 264.16 199.263 248.687 214.875 227.421C230.488 206.156 238.609 180.302 237.964 153.915C237.32 127.529 227.946 102.103 211.314 81.6277ZM119.013 244.947C101.61 244.947 84.5984 239.779 70.1286 230.097C55.6589 220.414 44.3813 206.652 37.7219 190.551C31.0625 174.45 29.3205 156.733 32.7162 139.64C36.1119 122.547 44.4927 106.847 56.7989 94.5241C69.105 82.2015 84.7837 73.81 101.852 70.411C118.921 67.012 136.613 68.7581 152.69 75.4285C168.768 82.0989 182.509 93.3939 192.176 107.885C201.844 122.377 207.003 139.413 207.001 156.841C206.999 180.209 197.728 202.619 181.227 219.142C164.726 235.665 142.348 244.947 119.013 244.947Z" fill="#DEDEDE"/>
+            </svg>
+            <svg class="researchtion__img-displey" width="202" height="202" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="101" cy="101" r="93" stroke="#D22856" stroke-width="16"/>
+            </svg>
+            <svg class="researchtion__img-time" width="106" height="70" viewBox="0 0 106 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48.9062 70H1V59.9219L18.2031 42.5312C23.2969 37.3125 26.625 33.7031 28.1875 31.7031C29.75 29.6719 30.875 27.7969 31.5625 26.0781C32.25 24.3594 32.5938 22.5781 32.5938 20.7344C32.5938 17.9844 31.8281 15.9375 30.2969 14.5938C28.7969 13.25 26.7812 12.5781 24.25 12.5781C21.5938 12.5781 19.0156 13.1875 16.5156 14.4062C14.0156 15.625 11.4062 17.3594 8.6875 19.6094L0.8125 10.2812C4.1875 7.40625 6.98438 5.375 9.20312 4.1875C11.4219 3 13.8438 2.09375 16.4688 1.46875C19.0938 0.8125 22.0312 0.484375 25.2812 0.484375C29.5625 0.484375 33.3438 1.26563 36.625 2.82812C39.9062 4.39062 42.4531 6.57812 44.2656 9.39062C46.0781 12.2031 46.9844 15.4219 46.9844 19.0469C46.9844 22.2031 46.4219 25.1719 45.2969 27.9531C44.2031 30.7031 42.4844 33.5312 40.1406 36.4375C37.8281 39.3438 33.7344 43.4844 27.8594 48.8594L19.0469 57.1562V57.8125H48.9062V70ZM105.297 55.7969H97.0469V70H82.8906V55.7969H53.6406V45.7188L83.6875 1.46875H97.0469V44.5469H105.297V55.7969ZM82.8906 44.5469V32.9219C82.8906 30.9844 82.9688 28.1719 83.125 24.4844C83.2812 20.7969 83.4062 18.6563 83.5 18.0625H83.125C81.9688 20.625 80.5781 23.125 78.9531 25.5625L66.3906 44.5469H82.8906Z" fill="#D22856"/>
+            </svg>
+          </div>
+          <div class="researchtion__desc">
+            <p class="researchtion__desc-cap">Эффект на 24 часа!</p>
+            <p class="researchtion__desc-text researchtion__desc-text--box">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
+            <a class="researchtion__desc-link" href="#" aria-label="Переход на страницу британского исследования">Узнать больше об исследовании</a>
+          </div>
         </div>
       </div>
       <div class="reviews reviews--box container">
@@ -284,9 +289,9 @@
             <p class="review__text review__text--box">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
           </div>
           <div class="slide-control slide-control--box reviews__slider reviews__slider--box reviews__slider--desktop-none">
-            <button class="slider-button slider-button--box slider-button--current review__point-slider-button review__slider-button--current" type="button" aria-label="Текущий слайд"></button>
-            <button class="slider-button slider-button--box review__point-slider-button" type="button" aria-label="Второй слайд"></button>
-            <button class="slider-button slider-button--box review__point-slider-button" type="button" aria-label="Третий слайд"></button>
+            <button class="slide-control__button slide-control__button--box slide-control__button--current" type="button" aria-label="Текущий слайд"></button>
+            <button class="slide-control__button slide-control__button--box" type="button" aria-label="Второй слайд"></button>
+            <button class="slide-control__button slide-control__button--box" type="button" aria-label="Третий слайд"></button>
           </div>
         </div>
         <svg class="reviews__arrow-slider-button reviews__arrow-slider-button--box reviews__arrow-right-slider-button slide slide-current" width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -328,7 +333,7 @@
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, img/index/cost-yes@2x.webp 2x" width="31" height="21">
+              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, img/index/cost-yes@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <img src="./img/index/cost-yes.png" srcset="./img/index/cost-yes@2x.png" width="31" height="21" alt="Розовый фильт входит в тариф База">
@@ -339,18 +344,18 @@
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x" width="31" height="21">
+              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <img src="./img/index/cost-yes.png" srcset="./img/index/cost-yes@2x.png" width="31" height="21" alt="Розовый фильт входит в тариф Стандарт">
             </picture>
           </td>
-          <td class="cost__services-yes-no cost__services-yes-no--box cost__services-item--angle-top-right">
+          <td class="cost__services-yes-no cost__services-yes-no--box cost__services-yes-no--angle-top-right">
             <p class="cost__services-item cost__services-item--inside-text">Розовый фильтр</p>
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x" width="31" height="21">
+              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <img src="./img/index/cost-yes.png" srcset="./img/index/cost-yes@2x.png" width="31" height="21" alt="Розовый фильт входит в тариф Анлим">
@@ -364,7 +369,7 @@
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x" width="27" height="27">
+              <source type="image/webp" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-no.png 1x, ./img/index/cost-no@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-no.png 1x, ./img/index/cost-no@2x.png 2x">
               <img src="./img/index/cost-no.png" srcset="./img/index/cost-no@2x.png" width="27" height="27" alt="Смайлики не входят в тариф База">
@@ -375,7 +380,7 @@
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x" width="31" height="21">
+              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <img src="./img/index/cost-yes.png" srcset="./img/index/cost-yes@2x.png" width="31" height="21" alt="Смайлики входят в тариф Стандарт">
@@ -386,7 +391,7 @@
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x" width="31" height="21">
+              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <img src="./img/index/cost-yes.png" srcset="./img/index/cost-yes@2x.png" width="31" height="21" alt="Смайлики входят в тариф Анлим">
@@ -400,7 +405,7 @@
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x" width="27" height="27">
+              <source type="image/webp" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-no.png 1x, ./img/index/cost-no@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-no.png 1x, ./img/index/cost-no@2x.png 2x">
               <img src="./img/index/cost-no.png" srcset="./img/index/cost-no@2x.png" width="27" height="27" alt="Комментарии не входят в тариф База">
@@ -411,18 +416,18 @@
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x" width="27" height="27">
+              <source type="image/webp" srcset="./img/index/cost-no.webp 1x, ./img/index/cost-no@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-no.png 1x, ./img/index/cost-no@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-no.png 1x, ./img/index/cost-no@2x.png 2x">
               <img src="./img/index/cost-no.png" srcset="./img/index/cost-no@2x.png" width="27" height="27" alt="Комментарии не входят в тариф Стандарт">
             </picture>
           </td>
-          <td class="cost__services-yes-no cost__services-yes-no--box ost__services-item--angle-bottom-right">
+          <td class="cost__services-yes-no cost__services-yes-no--box cost__services-yes-no--angle-bottom-right">
             <p class="cost__services-item cost__services-item--inside-text">Комментарии</p>
             <picture class="cost__choice cost__choice--box">
               <source type="image/webp" media="(min-width: 940px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source type="image/webp" media="(min-width: 620px)" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
-              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x" width="31" height="21">
+              <source type="image/webp" srcset="./img/index/cost-yes.webp 1x, ./img/index/cost-yes@2x.webp 2x">
               <source media="(min-width: 940px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <source media="(min-width: 620px)" srcset="./img/index/cost-yes.png 1x, ./img/index/cost-yes@2x.png 2x">
               <img src="./img/index/cost-yes.png" srcset="./img/index/cost-yes@2x.png" width="31" height="21" alt="Комментарии входят в тариф Анлим">
@@ -431,9 +436,9 @@
         </tr>
       </table>
       <div class="slide-control slide-control--box cost__slider cost__slider--box cost__slider--tablet-none">
-        <button class="slider-button slider-button--box cost__slider-button" type="button" aria-label="Первый слайд"></button>
-        <button class="slider-button slider-button--box slider-button--current cost__slider-button cost__slider-button--current" type="button" aria-label="Текущий слайд"></button>
-        <button class="slider-button slider-button--box cost__slider-button" type="button" aria-label="Третий слайд"></button>
+        <button class="slide-control__button slide-control__button--box cost__slider-button" type="button" aria-label="Первый слайд"></button>
+        <button class="slide-control__button slide-control__button--box slide-control__button--current cost__slider-button cost__slider-button--current" type="button" aria-label="Текущий слайд"></button>
+        <button class="slide-control__button slide-control__button--box cost__slider-button" type="button" aria-label="Третий слайд"></button>
       </div>
     </div>
     <div class="contacts">
@@ -457,12 +462,16 @@
           </div>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe class="contacts__map-online" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sua!4v1615991844580!5m2!1sen!2sua" width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Карта Санкт-Петербурга"></iframe>
+      <div class="contacts__bkg contacts__bkg--box">
+        <div class="contacts__map-marker"></div>
+        <div class="contacts__map">
+          <iframe class="contacts__map-online" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sua!4v1615991844580!5m2!1sen!2sua" width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy" aria-label="Карта Санкт-Петербурга"></iframe>
+        </div>
+        <div class="contacts__triangle"></div>
       </div>
     </div>
   </main>
-  <footer class="footer container">
+  <footer class="footer footer--box container">
     <div class="footer__logo">
       <svg class="footer__logo-img" width="59" height="40" viewBox="0 0 59 40" fill="#D22856" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M53.8917 6.58616L58.9302 27.7312C59.0013 27.9491 59.0184 28.1815 58.98 28.4078C58.9417 28.6341 58.849 28.8472 58.7102 29.0284C58.5715 29.2096 58.3909 29.3532 58.1845 29.4465C57.978 29.5398 57.7522 29.58 57.5268 29.5635H53.5201C52.8298 35.3747 47.9494 39.8784 42.0315 39.8784C36.1136 39.8784 31.2332 35.3747 30.543 29.5635H28.5778C27.8869 35.442 22.9527 40 16.9685 40C10.9742 40 6.0335 35.4266 5.35571 29.5337H1.45014C1.22961 29.5445 1.00974 29.5014 0.808914 29.4082C0.608085 29.315 0.432119 29.1743 0.295711 28.9979C0.159304 28.8214 0.0664152 28.6144 0.0248022 28.3941C-0.0168108 28.1737 -0.00593994 27.9464 0.0565069 27.7312L5.10477 6.58616C5.45562 4.25872 7.63865 0 13.4861 0C13.8738 0 14.2456 0.156518 14.5197 0.435122C14.7939 0.713727 14.9479 1.0916 14.9479 1.4856C14.9479 1.87961 14.7939 2.25748 14.5197 2.53608C14.2456 2.81468 13.8738 2.9712 13.4861 2.9712C8.7789 2.9712 8.04797 6.6654 7.9895 7.07146L3.3408 26.6022H5.37467C6.12089 20.7847 11.0272 16.2918 16.9685 16.2918C22.9066 16.2918 27.8107 20.7798 28.5611 26.5926L30.5587 26.6017C31.3043 20.8518 36.1567 16.4134 42.0315 16.4134C47.9178 16.4134 52.7776 20.8691 53.5086 26.6353V26.5824H55.6459L51.007 7.07146C50.9387 6.6654 50.237 2.9712 45.5104 2.9712C45.1227 2.9712 44.7509 2.81468 44.4767 2.53608C44.2026 2.25748 44.0485 1.87961 44.0485 1.4856C44.0485 1.0916 44.2026 0.713727 44.4767 0.435122C44.7509 0.156518 45.1227 0 45.5104 0C51.3578 0 53.5408 4.25872 53.8917 6.58616ZM25.6722 29.5635C25.7448 29.1018 25.7825 28.6283 25.7825 28.1459C25.7825 27.6164 25.7371 27.0977 25.65 26.5935C24.9252 22.3982 21.3141 19.2097 16.9685 19.2097C12.6203 19.2097 9.00753 22.402 8.28571 26.601C8.19945 27.1028 8.15447 27.619 8.15447 28.1459C8.15447 28.6205 8.19096 29.0864 8.26125 29.541C8.92191 33.8136 12.5687 37.0821 16.9685 37.0821C21.3605 37.0821 25.0023 33.8251 25.6722 29.5635ZM50.6138 29.5635C50.6874 29.102 50.7256 28.6285 50.7256 28.1459C50.7256 23.2777 46.8331 19.3313 42.0315 19.3313C37.2299 19.3313 33.3374 23.2777 33.3374 28.1459C33.3374 28.6285 33.3756 29.102 33.4492 29.5635C34.118 33.7577 37.7058 36.9605 42.0315 36.9605C46.3572 36.9605 49.945 33.7577 50.6138 29.5635Z" />

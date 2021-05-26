@@ -1,0 +1,229 @@
+// Contacts
+
+.contacts__contacts {
+  height: 395px;
+}
+
+.contacts__caption {
+  margin: 70px auto 30px;
+}
+
+.contacts__caption-text {
+  color: @black-blue;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.contacts__categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-start;
+  }
+}
+
+.contacts__categories--box {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+}
+
+.contacts__category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts__category--box {
+  width: 241px;
+  padding: 12px 30px 8px;
+  margin: 0 auto;
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__tel {
+    order: 1;
+  }
+
+  .contacts__email {
+    order: 3;
+  }
+
+  .contacts__address {
+    order: 2;
+  }
+}
+
+.contacts__speech {
+  color: @black;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.contacts__info {
+  list-style-type: none;
+  color: @red;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.contacts__info--email {
+  &:focus {
+    color: @black-blue;
+  }
+
+  &:hover {
+    color: @black-blue;
+  }
+
+  &:active {
+    color: @black-blue;
+    opacity: 0.3;
+  }
+}
+
+.contacts__bkg {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__bkg--box {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 200px;
+  margin-top: 60px;
+  background-image: url("../img/index/map_mob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: @grey-dark;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/map_mob@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+    background-image: url("../img/index/map_tab.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/map_tab@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+    background-image: url("../img/index/map_desk.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/map_desk@2x.jpg");
+    }
+  }
+}
+
+.contacts__map-marker {
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/index/map-marker.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
+  margin: 82px auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/map-marker@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 169px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 233px auto;
+  }
+}
+
+.contacts__map {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 200px;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
+}
+/*
+.contacts__triangle {
+  width: 1200px;
+  height: 123px;
+  position: absolute;
+  z-index: 4;
+  background-image: url("../img/index/triangle-white-background_mob.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+
+  /*@media (min-resolution: 2dppx) {
+    background-image: url("../img/index/triangle-white-background_mob@2x.png");
+  }*/
+/*
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/index/triangle-white-background_tab.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/triangle-white-background_tab@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1439px;
+    background-image: url("../img/index/triangle-white-background_desk.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/triangle-white-background_desk@2x.png");
+    }
+  }
+}*/
+
+.contacts__map-online {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
